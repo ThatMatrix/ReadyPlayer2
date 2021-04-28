@@ -1,0 +1,13 @@
+﻿# Default ignored files
+/shelf/
+/workspace.xml
+# Rider ignored files
+/modules.xml
+/projectSettingsUpdater.xml
+/.idea.RP2.iml
+/contentModel.xml
+# Datasource local storage ignored files
+/../../../../../../../../../../../../../:\Users\noeur\Desktop\epita\projet S2\oasisTestGit\repogit\RP2\RP2\.idea\.idea.RP2\.idea/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/
