@@ -58,7 +58,7 @@ public class cameraManagement : MonoBehaviour
                     players.Add(player.GetInstanceID(), false);
                 }
             }
-            catch (Exception _)
+            catch (Exception)
             {
                 // ignored
             }

@@ -34,7 +34,7 @@ public class PhotonLobby : MonoBehaviourPunCallbacks
     public UnityEvent playerTypeMidRange;
     public UnityEvent playerTypeContact;
 
-    private bool _connectedToMaster;
+    //private bool _connectedToMaster;
 
     
     private void Awake()
@@ -45,7 +45,7 @@ public class PhotonLobby : MonoBehaviourPunCallbacks
     // Start is called before the first frame update
     void Start()
     {
-        _connectedToMaster = false;
+        //_connectedToMaster = false;
         PhotonNetwork.ConnectUsingSettings(); //Connects to photon MasterServer
         MenuUiListInitialize();
         SettingsUiListInitialize();
@@ -135,7 +135,7 @@ public class PhotonLobby : MonoBehaviourPunCallbacks
     {
         Debug.Log("Connection to the master server successful");
         PhotonNetwork.AutomaticallySyncScene = true;
-        _connectedToMaster = true;
+        //_connectedToMaster = true;
         Debug.Log($"isMaster: {PhotonNetwork.IsMasterClient}");
         offlineButton.SetActive(false);
         settingsButton.SetActive(true);
