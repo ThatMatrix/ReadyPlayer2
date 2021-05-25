@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
@@ -11,13 +12,16 @@ public class MenuPause : MonoBehaviourPun
 
     public GameObject menuPause;
 
-    public GameObject disconnectButton;
+    //public GameObject disconnectButton;
+    //public GameObject saveButton;
+
+    public GameObject[] listButtons;
     // Start is called before the first frame update
     void Start()
     {
         paused = false;
-        
-        disconnectButton.SetActive(false);
+        //disconnectButton.SetActive(false);
+        DeactivateAllButtons();
         menuPause.SetActive(false);
         
     }
@@ -31,13 +35,14 @@ public class MenuPause : MonoBehaviourPun
             if (!paused)
             {
                 menuPause.SetActive(true);
-                disconnectButton.SetActive(true);
-                
+                //disconnectButton.SetActive(true);
+                ActivateAllButtons();
                 DisablePlayer();
             }
             else
             {
-                disconnectButton.SetActive(false);
+                DeactivateAllButtons();
+                //disconnectButton.SetActive(false);
                 menuPause.SetActive(false);
                 
                 if (player != null)
@@ -86,5 +91,52 @@ public class MenuPause : MonoBehaviourPun
         }
         PhotonNetwork.automaticallySyncScene = false;
         SceneManager.LoadScene(0);
+    }
+
+    void DeactivateAllButtons()
+    {
+        foreach (var button in listButtons)
+        {
+            button.SetActive(false);
+        }
+    }
+
+    void ActivateAllButtons()
+    {
+        foreach (var button in listButtons)
+        {
+            button.SetActive(true);
+        }
+    }
+
+    public enum PlayerType
+    {
+        Mage,
+        Midrange,
+        Contact,
+    }
+
+    PlayerType GetPlayerType()
+    {
+        if (player.GetComponent<MageSpells>() != null)
+        {
+            return PlayerType.Mage;
+        }
+
+        if (player.GetComponent<ShotgunSpells>() != null)
+        { 
+            return PlayerType.Midrange;
+        }
+
+        throw new NotImplementedException("not implemented this type of player");
+    }
+    
+    public void OnSaveButtonClicked()
+    {
+        int sceneIndex = SceneManager.GetActiveScene().buildIndex;
+        int playerType = (int) GetPlayerType();
+        PlayerPrefs.SetInt("SceneIndex", sceneIndex);
+        PlayerPrefs.SetInt("PlayerType", playerType);
+        Debug.Log($"Game Saved: SceneIndex = {sceneIndex}, PlayerType = {(PlayerType) playerType}");
     }
 }
