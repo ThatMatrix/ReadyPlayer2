@@ -9,13 +9,6 @@ using UnityEngine.SceneManagement;
 
 public class photonRoom : MonoBehaviourPunCallbacks, IInRoomCallbacks
 {
-    private enum PlayerType
-    {
-        IceMage,
-        MidRange,
-        Contact,
-    }
-
     public static photonRoom room;
     private PhotonView PV;
 
@@ -111,16 +104,16 @@ public class photonRoom : MonoBehaviourPunCallbacks, IInRoomCallbacks
 
     public void PlayerTypeMidRange()
     {
-        playerTypeChosen = (int)PlayerType.MidRange;
+        playerTypeChosen = (int)MenuPause.PlayerType.Midrange;
     }
 
     public void PlayerTypeIceMage()
     {
-        playerTypeChosen = (int)PlayerType.IceMage;
+        playerTypeChosen = (int)MenuPause.PlayerType.Mage;
     }
 
     public void PlayerTypeContact()
     {
-        playerTypeChosen = (int)PlayerType.Contact;
+        playerTypeChosen = (int)MenuPause.PlayerType.Contact;
     }
 }

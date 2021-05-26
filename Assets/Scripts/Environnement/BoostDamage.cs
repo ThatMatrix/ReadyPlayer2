@@ -14,6 +14,7 @@ public class BoostDamage : MonoBehaviour
         MAGE,
         MIDRANGE,
         CONTACT,
+        NOTKNOWN,
     }
 
     private TypeOfPlayer _typeOfPlayer;
@@ -29,6 +30,7 @@ public class BoostDamage : MonoBehaviour
     {
         PV = GetComponent<PhotonView>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
+        _typeOfPlayer = TypeOfPlayer.NOTKNOWN;
     }
 
     // Update is called once per frame
@@ -40,7 +42,7 @@ public class BoostDamage : MonoBehaviour
 
             foreach (var shoot in shoots)
             {
-                if (shoot.GetComponent<Projectile>())
+                if (_typeOfPlayer == TypeOfPlayer.MAGE)
                 {
                     Projectile projectile = shoot.GetComponent<Projectile>();
                     if (!projectile.hasBeenBoosted)
@@ -49,7 +51,7 @@ public class BoostDamage : MonoBehaviour
                         projectile.boostValue = valueOfBoost;
                     }
                 }
-                else if (shoot.GetComponent<ShotGunBullet>())
+                else if (_typeOfPlayer == TypeOfPlayer.MIDRANGE)
                 {
                     ShotGunBullet projectile = shoot.GetComponent<ShotGunBullet>();
                     if (!projectile.hasBeenBoosted)

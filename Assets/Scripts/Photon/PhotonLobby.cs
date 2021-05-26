@@ -34,7 +34,9 @@ public class PhotonLobby : MonoBehaviourPunCallbacks
     public UnityEvent playerTypeMidRange;
     public UnityEvent playerTypeContact;
 
-    private bool _connectedToMaster;
+    public GameObject LoadButton;
+
+    //private bool _connectedToMaster;
 
     
     private void Awake()
@@ -45,7 +47,7 @@ public class PhotonLobby : MonoBehaviourPunCallbacks
     // Start is called before the first frame update
     void Start()
     {
-        _connectedToMaster = false;
+        //_connectedToMaster = false;
         PhotonNetwork.ConnectUsingSettings(); //Connects to photon MasterServer
         MenuUiListInitialize();
         SettingsUiListInitialize();
@@ -99,6 +101,7 @@ public class PhotonLobby : MonoBehaviourPunCallbacks
     {
         uiGameObjectsMenuBase = new List<GameObject>();
         uiGameObjectsMenuBase.Add(battleButton);
+        uiGameObjectsMenuBase.Add(LoadButton);
         uiGameObjectsMenuBase.Add(offlineButton);
         uiGameObjectsMenuBase.Add(cancelButton);
         uiGameObjectsMenuBase.Add(settingsButton);
@@ -135,11 +138,12 @@ public class PhotonLobby : MonoBehaviourPunCallbacks
     {
         Debug.Log("Connection to the master server successful");
         PhotonNetwork.AutomaticallySyncScene = true;
-        _connectedToMaster = true;
+        //_connectedToMaster = true;
         Debug.Log($"isMaster: {PhotonNetwork.IsMasterClient}");
         offlineButton.SetActive(false);
         settingsButton.SetActive(true);
         battleButton.SetActive(true);
+        LoadButton.SetActive(true);
         secondRoomButton.SetActive(true);
     }
 
@@ -147,6 +151,7 @@ public class PhotonLobby : MonoBehaviourPunCallbacks
     {
         Debug.Log("BattleButton was clicked");
         battleButton.SetActive(false);
+        LoadButton.SetActive(false);
         settingsButton.SetActive(false);
         secondRoomButton.SetActive(false);
         
@@ -210,6 +215,7 @@ public class PhotonLobby : MonoBehaviourPunCallbacks
         contactButton.SetActive(false); 
         
         battleButton.SetActive(true);
+        LoadButton.SetActive(true);
         settingsButton.SetActive(true);
         secondRoomButton.SetActive(true);
     }
@@ -265,5 +271,26 @@ public class PhotonLobby : MonoBehaviourPunCallbacks
         Resolution resolution = resolutions[resolutionIndex];
         Screen.SetResolution(resolution.width, 
             resolution.height, Screen.fullScreen);
+    }
+
+    public void LoadButtonClicked()
+    {
+        //PlayerPrefs.SetInt("SceneIndex", sceneIndex);
+        //PlayerPrefs.SetInt("PlayerType", playerType);
+        if (PlayerPrefs.HasKey("SceneIndex"))
+        {
+            int sceneIndex = PlayerPrefs.GetInt("SceneIndex");
+            photonRoom.room.multiplayerScene = sceneIndex;
+
+        }
+
+        if (PlayerPrefs.HasKey("PlayerType"))
+        {
+            int playerType = PlayerPrefs.GetInt("PlayerType");
+            photonRoom.room.playerTypeChosen = playerType;
+        }
+        
+        CreateRoom();
+        
     }
 }
