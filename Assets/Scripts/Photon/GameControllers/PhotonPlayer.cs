@@ -56,7 +56,8 @@ public class PhotonPlayer : MonoBehaviourPunCallbacks, IOnEventCallback
                 _prefabName = Path.Combine("PhotonPrefabs", "MidRange");
                 break;
             case PlayerType.Contact:
-                throw new NotImplementedException();
+                _prefabName = Path.Combine("PhotonPrefabs", "Melee");
+                break;
         }
     }
     
