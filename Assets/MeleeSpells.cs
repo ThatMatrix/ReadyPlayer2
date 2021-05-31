@@ -6,7 +6,14 @@ public class MeleeSpells : PlayerSpells
 {
     public float dashlength;
     
+    public int attackDamage = 20;
+    public float attackRange = 1f;
+    public Vector3 attackOffset;
+    public LayerMask attackMask;
 
+    public Transform player;
+    
+    
     public override void SetCooldowns()
     {
         cooldown1 = 2.5f;
@@ -17,7 +24,30 @@ public class MeleeSpells : PlayerSpells
 
     public override void MainSpell()
     {
-        throw new System.NotImplementedException();
+        Vector2 movement = GetComponent<PlayerMovement>().GetMovement();
+        GetComponent<PlayerMovement>().enabled = false;
+        
+        if (movement.x > 0 && movement.x > movement.y) // Dash Right
+        {
+            GetComponent<ShotGunDash>().SetDirection(2);
+        }
+        else if (movement.x < 0 && movement.x < movement.y) // Dash Left
+        {
+            GetComponent<ShotGunDash>().SetDirection(1);
+        }
+        else if (movement.y > 0 && movement.y > movement.x) // Dash Up
+        {
+            GetComponent<ShotGunDash>().SetDirection(3);
+        }
+        else if (movement.y < 0 && movement.y < movement.x) // Dash Down
+        {
+            GetComponent<ShotGunDash>().SetDirection(4);
+        }
+
+        GetComponent<ShotGunDash>().enabled = true;
+        
+        
+        Attack();
     }
 
     public override void SecondarySpell()
@@ -51,5 +81,29 @@ public class MeleeSpells : PlayerSpells
         {
             rb.position = rb.position + Vector2.down * dashlength;
         }
+    }
+    
+    
+    public void Attack()
+    {
+        Vector3 pos = transform.position;
+        pos += transform.right * attackOffset.x;
+        pos += transform.up * attackOffset.y;
+
+        Collider2D colInfo = Physics2D.OverlapCircle(pos, attackRange, attackMask);
+        if (colInfo != null && colInfo.CompareTag("Enemy"))
+        {
+            colInfo.GetComponent<EnemyHealth>().DamageEnemy(attackDamage);
+            Debug.Log("Attack done");
+        }
+    }
+    
+    void OnDrawGizmosSelected()
+    {
+        Vector3 pos = transform.position;
+        pos += transform.right * attackOffset.x;
+        pos += transform.up * attackOffset.y;
+
+        Gizmos.DrawWireSphere(pos, attackRange);
     }
 }
