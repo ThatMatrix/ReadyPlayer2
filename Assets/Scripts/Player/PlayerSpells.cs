@@ -61,7 +61,9 @@ public abstract class PlayerSpells : MonoBehaviour
                 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
                 
                 ChooseFirePoint();
-            
+                
+                Debug.Log("firePoint passed");
+                
                 if (Input.GetButtonDown("Fire1") && Time.time > nextSpell1)
                 {
                     MainSpell();
@@ -70,6 +72,7 @@ public abstract class PlayerSpells : MonoBehaviour
 
                 if ((Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.RightShift)) && Time.time > nextMovement)
                 {
+                    Debug.Log("Got to movement Spell");
                     MovementSpell();
                     nextMovement = Time.time + cooldownM;
                 }
