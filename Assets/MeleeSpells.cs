@@ -1,5 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.IO;
+using Photon.Pun;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class MeleeSpells : PlayerSpells
@@ -47,7 +50,7 @@ public class MeleeSpells : PlayerSpells
         GetComponent<ShotGunDash>().enabled = true;
         
         
-        Attack();
+        Attack(movement.x > 0);
     }
 
     public override void SecondarySpell()
@@ -84,12 +87,20 @@ public class MeleeSpells : PlayerSpells
     }
     
     
-    public void Attack()
+    public void Attack(bool right)
     {
+        Debug.Log("Attack melee facing right :" + right);
         Vector3 pos = transform.position;
-        pos += transform.right * attackOffset.x;
+        if (right)
+        {
+            pos += transform.right * attackOffset.x;
+        }
+        else
+        {
+            pos += transform.right * -attackOffset.x;
+        }
         pos += transform.up * attackOffset.y;
-
+        
         Collider2D colInfo = Physics2D.OverlapCircle(pos, attackRange, attackMask);
         if (colInfo != null && colInfo.CompareTag("Enemy"))
         {
