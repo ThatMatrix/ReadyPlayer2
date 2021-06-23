@@ -8,6 +8,7 @@ using UnityEngine;
 public class MeleeSpells : PlayerSpells
 {
     public float dashlength;
+    public float kunaiForce;
     
     public int attackDamage = 20;
     public float attackRange = 1f;
@@ -55,7 +56,11 @@ public class MeleeSpells : PlayerSpells
 
     public override void SecondarySpell()
     {
-        throw new System.NotImplementedException();
+        GameObject kunai = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "kunai"), 
+            firePoint.transform.position, firePoint.transform.rotation);
+        
+        Rigidbody2D rbBullet = kunai.GetComponent<Rigidbody2D>();
+        rbBullet.AddForce(firePoint.transform.up * kunaiForce, ForceMode2D.Impulse);
     }
 
     public override void Ultimate()

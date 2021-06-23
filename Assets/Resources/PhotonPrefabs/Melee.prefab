@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1084357223704901510}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.93, y: -0.19, z: -0.033367634}
+  m_LocalPosition: {x: 3.52, y: -0.38, z: -0.033367634}
   m_LocalScale: {x: 0.2, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4016624707172909279}
@@ -76,7 +76,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1229821525145514501}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.14905658, y: -2.4952195, z: 0}
+  m_LocalPosition: {x: -0.41, y: -4.98, z: 0}
   m_LocalScale: {x: 0.88638, y: 0.8764833, z: 1}
   m_Children: []
   m_Father: {fileID: 4016624707172909279}
@@ -107,7 +107,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4016624705680932354}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.49, y: -0.13, z: -0.033367634}
+  m_LocalPosition: {x: -5.78, y: -0.13, z: -0.033367634}
   m_LocalScale: {x: 0.2, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4016624707172909279}
@@ -434,6 +434,7 @@ MonoBehaviour:
   cooldownU: 0
   nextUltimate: 0
   dashlength: 5
+  kunaiForce: 20
   attackDamage: 20
   attackRange: 2
   attackOffset: {x: 3, y: 0.5, z: 0}
