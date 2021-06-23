@@ -9,7 +9,7 @@ public class ShotGunBullet : MonoBehaviour
     private PhotonView PV;
 
     private float spawnTime;
-    private float duration = 0.2f;
+    public float duration = 0.2f;
     
     public bool hasBeenBoosted;
     public int boostValue;
