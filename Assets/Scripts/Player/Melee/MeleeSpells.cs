@@ -25,11 +25,11 @@ public class MeleeSpells : PlayerSpells
     public void SetRotations()
     {
         haut.transform.rotation = new Quaternion(0, 1, 0, 0);
-        bas.transform.rotation = new Quaternion(0, -1, 0, 0);
-        droiteBas.transform.rotation = new Quaternion(1, -1, 0, 0);
-        droiteHaut.transform.rotation = new Quaternion(1, 1, 0, 0);
-        gaucheHaut.transform.rotation = new Quaternion(-1, 1, 0, 0);
-        gaucheBas.transform.rotation = new Quaternion(-1, -1, 0, 0);
+        bas.transform.rotation = new Quaternion(1, 0, 0, 0);
+        droiteBas.transform.rotation = new Quaternion(1, 1, 1, 0);
+        droiteHaut.transform.rotation = new Quaternion(1, 1, 0, 1);
+        gaucheHaut.transform.rotation = new Quaternion(0, 1, 1, 1);
+        gaucheBas.transform.rotation = new Quaternion(1, 0, 1, 1);
     }
     public override void SetCooldowns()
     {
@@ -94,7 +94,7 @@ public class MeleeSpells : PlayerSpells
         rbBulletBAS.AddForce(bas.transform.up * kunaiForce, ForceMode2D.Impulse);
         
         //Droite
-        Quaternion droite = new Quaternion(1, 0, 0, 0);
+        Quaternion droite = new Quaternion(1, 1, 0, 0);
         GameObject kunaiDROITE = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "kunaiTMP"), 
             firePointRight.transform.position, droite);
         
@@ -102,7 +102,7 @@ public class MeleeSpells : PlayerSpells
         rbBulletDROITE.AddForce(kunaiDROITE.transform.up * kunaiForce, ForceMode2D.Impulse);
         
         //Gauche
-        Quaternion gauche = new Quaternion(-1, 0, 0, 0);
+        Quaternion gauche = new Quaternion(0, 0, 1, 1);
         GameObject kunaiGAUCHE = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "kunaiTMP"), 
             firePointLeft.transform.position, gauche);
         
