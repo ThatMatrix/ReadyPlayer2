@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SepticEyeSecondPhase : StateMachineBehaviour
+public class SepticEyeThirdPhase : StateMachineBehaviour
 {
     private List<GameObject> points;
     private float timeBtwShots;
@@ -15,6 +15,7 @@ public class SepticEyeSecondPhase : StateMachineBehaviour
         me = animator.GetComponent<SecticEye>();
         timeBtwShots = animator.GetComponent<SecticEye>().startTimeBtwShots / 3;
         points = animator.GetComponent<SecticEye>().points;
+        me.DoubleShotForce();
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
