@@ -22,14 +22,17 @@ public class UltimateBullet : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.GetComponent<EnemyHealth>() != null)
+        if (!collision.gameObject.CompareTag("SpawnZone"))
         {
-            collision.collider.GetComponent<EnemyHealth>().DamageEnemy(damage + boostValue);
-        }
+            if (collision.collider.GetComponent<EnemyHealth>() != null)
+            {
+                collision.collider.GetComponent<EnemyHealth>().DamageEnemy(damage + boostValue);
+            }
         
-        if (PV && ( PV.IsMine))
-        {
-            PhotonNetwork.Destroy(gameObject);
+            if (PV && ( PV.IsMine))
+            {
+                PhotonNetwork.Destroy(gameObject);
+            }
         }
     }
 }

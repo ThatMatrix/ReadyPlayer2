@@ -1293,7 +1293,7 @@ GameObject:
   - component: {fileID: 188257437}
   m_Layer: 0
   m_Name: SpawnSalleAManger
-  m_TagString: Untagged
+  m_TagString: SpawnZone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33257,7 +33257,7 @@ GameObject:
   - component: {fileID: 1089849150}
   m_Layer: 0
   m_Name: SpawnCuisine
-  m_TagString: Untagged
+  m_TagString: SpawnZone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35098,7 +35098,7 @@ GameObject:
   - component: {fileID: 1172534891}
   m_Layer: 0
   m_Name: SpawnBuandrie
-  m_TagString: Untagged
+  m_TagString: SpawnZone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35253,9 +35253,9 @@ GameObject:
   - component: {fileID: 1182663285}
   - component: {fileID: 1182663287}
   - component: {fileID: 1182663286}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: SpawnCouloir
-  m_TagString: Untagged
+  m_TagString: SpawnZone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35268,7 +35268,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1182663284}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.2, y: 1.1, z: 0}
+  m_LocalPosition: {x: -0.2, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1802745222}
@@ -37351,7 +37351,7 @@ GameObject:
   - component: {fileID: 1641143420}
   m_Layer: 0
   m_Name: SpawnStorage
-  m_TagString: Untagged
+  m_TagString: SpawnZone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37398,7 +37398,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -1.8219662, y: -1.41541}
@@ -37837,7 +37837,7 @@ GameObject:
   - component: {fileID: 1704775191}
   m_Layer: 0
   m_Name: SpawnBureau
-  m_TagString: Untagged
+  m_TagString: SpawnZone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

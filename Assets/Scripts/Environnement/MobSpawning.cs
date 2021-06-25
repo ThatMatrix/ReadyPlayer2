@@ -17,7 +17,7 @@ public class MobSpawning : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player") && nameMobsToSpawn.Length > 0 && !_hasBeenEnabled)
+        if (other.gameObject.CompareTag("Player") && nameMobsToSpawn.Length > 0 && !_hasBeenEnabled)
         {
             _hasBeenEnabled = true;
             foreach (var spawnPoint in mobSpawnPoints)
