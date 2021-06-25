@@ -60,13 +60,13 @@ public class SecticEye : MonoBehaviour
         
         GameObject bullet2 = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "Tear (SepticEye)"),
             points[1].transform.position, droite);
-        Rigidbody2D RB2 = bullet1.GetComponent<Rigidbody2D>();
+        Rigidbody2D RB2 = bullet2.GetComponent<Rigidbody2D>();
         RB2.AddForce(points[1].transform.up * shotsForce, ForceMode2D.Impulse);
         
         
         GameObject bullet3 = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "Tear (SepticEye)"),
             points[2].transform.position, droite);
-        Rigidbody2D RB3 = bullet1.GetComponent<Rigidbody2D>();
+        Rigidbody2D RB3 = bullet3.GetComponent<Rigidbody2D>();
         RB3.AddForce(points[2].transform.up * shotsForce, ForceMode2D.Impulse);
     }
     
@@ -82,13 +82,13 @@ public class SecticEye : MonoBehaviour
         
         GameObject bullet2 = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "Tear (SepticEye)"),
             points[4].transform.position, gauche);
-        Rigidbody2D RB2 = bullet1.GetComponent<Rigidbody2D>();
+        Rigidbody2D RB2 = bullet2.GetComponent<Rigidbody2D>();
         RB2.AddForce(points[4].transform.up * shotsForce, ForceMode2D.Impulse);
         
         
         GameObject bullet3 = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "Tear (SepticEye)"),
             points[5].transform.position, gauche);
-        Rigidbody2D RB3 = bullet1.GetComponent<Rigidbody2D>();
+        Rigidbody2D RB3 = bullet3.GetComponent<Rigidbody2D>();
         RB3.AddForce(points[5].transform.up * shotsForce, ForceMode2D.Impulse);
     }
 }
