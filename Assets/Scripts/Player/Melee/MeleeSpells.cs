@@ -42,6 +42,8 @@ public class MeleeSpells : PlayerSpells
 
     public override void MainSpell()
     {
+        _animator.SetTrigger("Attack");
+        
         Vector2 movement = GetComponent<PlayerMovement>().GetMovement();
         GetComponent<PlayerMovement>().enabled = false;
         

@@ -51,7 +51,7 @@ public class HealthBar : MonoBehaviourPunCallbacks, IOnEventCallback
     public void OnEvent(EventData photonEvent)
     {
         
-        if (photonEvent.Code == 1 || photonEvent.Code == 3 || photonEvent.Code == 5) //Passage etage
+        if (photonEvent.Code == 1 || photonEvent.Code == 3 || photonEvent.Code == 5 || photonEvent.Code == 6) //Passage etage
         {
             playerHealth = FindMyLife(); //set le player sur le player de l'étage
             Debug.Log($"event {photonEvent.Code} received by HealthBar");
