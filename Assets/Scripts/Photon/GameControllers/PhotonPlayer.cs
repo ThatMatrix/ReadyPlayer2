@@ -123,7 +123,7 @@ public class PhotonPlayer : MonoBehaviourPunCallbacks, IOnEventCallback
         
         byte eventcode = data.Code; //get the code of the event recieved
 
-        if (eventcode == 2 || eventcode == 3 || eventcode == 5 || eventcode == 4) //if the code is the code to go to floor2
+        if (eventcode == 2 || eventcode == 3 || eventcode == 5 || eventcode == 4 || eventcode == 6) //if the code is the code to go to floor2
         {
             if (myAvatar.GetComponent<PlayerMovement>() != null && myAvatar.GetComponent<PlayerMovement>().HasCamera) //avoid null object references
             {
