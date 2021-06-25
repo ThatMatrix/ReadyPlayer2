@@ -10,16 +10,24 @@ public class SecticEye : MonoBehaviour
     public int hp2ndPhase;
     public int hp3rdPhase;
     public List<GameObject> points;
-    public float shotsForce;
+    private float shotsForce;
+    public float initialShotForce;
     
     private EnemyHealth _health;
     private PhotonView PV;
     private Animator _animator;
     public float startTimeBtwShots;
+
+    public void DoubleShotForce()
+    {
+        shotsForce = shotsForce * 2;
+    }
     
     // Start is called before the first frame update
     void Start()
     {
+        shotsForce = initialShotForce;
+        FindObjectOfType<AudioManager>().Play("SepticEyeTheme");
         Quaternion droite = new Quaternion(1, 1, 0, 0);
         points[0].transform.rotation = droite;
         points[1].transform.rotation = droite;

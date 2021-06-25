@@ -17474,6 +17474,36 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: SepticEyeTheme
+    clip: {fileID: 8300000, guid: dc9953f73d388b34bbdd37e73b28cb5f, type: 3}
+    volume: 0.204
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: NPCTheme
+    clip: {fileID: 8300000, guid: 64f552d728ff999428d6aac7ff1de00b, type: 3}
+    volume: 0.204
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: UsualStage
+    clip: {fileID: 8300000, guid: b7bd6d479a75d2844a9826fdc936ae2a, type: 3}
+    volume: 0.204
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: MattTheme
+    clip: {fileID: 8300000, guid: 6e70d5a3f7a113b4aaa4f14ee3c17765, type: 3}
+    volume: 0.204
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: CasperTheme
+    clip: {fileID: 8300000, guid: 6e70d5a3f7a113b4aaa4f14ee3c17765, type: 3}
+    volume: 0.204
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
 --- !u!4 &897062987
 Transform:
   m_ObjectHideFlags: 0

@@ -17334,6 +17334,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8462313492760322255, guid: 9120c53609e6b9e4695991c0060aa0ed,
         type: 3}
+      propertyPath: hp2ndPhase
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 8462313492760322255, guid: 9120c53609e6b9e4695991c0060aa0ed,
+        type: 3}
+      propertyPath: shotsForce
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8462313492760322255, guid: 9120c53609e6b9e4695991c0060aa0ed,
+        type: 3}
+      propertyPath: initialShotForce
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8462313492760322255, guid: 9120c53609e6b9e4695991c0060aa0ed,
+        type: 3}
       propertyPath: points.Array.data[0]
       value: 
       objectReference: {fileID: 1493566205}
