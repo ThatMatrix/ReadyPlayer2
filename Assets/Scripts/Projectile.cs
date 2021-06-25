@@ -21,17 +21,21 @@ public class Projectile : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.GetComponent<EnemyHealth>() != null && gameObject.CompareTag("Ally_shot"))
+        if (!collision.CompareTag("SpawnZone"))
         {
-            collision.GetComponent<EnemyHealth>().DamageEnemy(damage + boostValue);
-        } else if (collision.GetComponent<Health>() != null && gameObject.CompareTag("Enemy_shot"))
-        {
-            collision.GetComponent<Health>().DamagePlayer(damage);
-        }
+            if (collision.GetComponent<EnemyHealth>() != null && gameObject.CompareTag("Ally_shot"))
+            {
+                collision.GetComponent<EnemyHealth>().DamageEnemy(damage + boostValue);
+            } else if (collision.GetComponent<Health>() != null && gameObject.CompareTag("Enemy_shot"))
+            {
+                collision.GetComponent<Health>().DamagePlayer(damage);
+            }
         
-        if (PV && ( PV.IsMine))
-        {
-            PhotonNetwork.Destroy(gameObject);
+            if (PV && ( PV.IsMine))
+            {
+                PhotonNetwork.Destroy(gameObject);
+            }
         }
     }
+        
 }

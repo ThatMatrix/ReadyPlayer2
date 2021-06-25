@@ -165,7 +165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 364cb6822cd81b24a92f0cdf695bd97d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shoot: {fileID: 0}
+  shoot: {fileID: 4791882047589075227, guid: 74966d00e74d5304ea54d67c4ca479a2, type: 3}
   isFlipped: 0
 --- !u!114 &-2334522601640247459
 MonoBehaviour:

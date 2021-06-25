@@ -59,7 +59,7 @@ public class Bullet : MonoBehaviour
     // Update is called once per frame
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (!col.gameObject.tag.Equals("Droid"))
+        if (!col.gameObject.tag.Equals("Droid") && !col.gameObject.tag.Equals("SpawnZone"))
         {
             if (col.GetComponent<Health>() != null)
                 col.GetComponent<Health>().DamagePlayer(damage);
