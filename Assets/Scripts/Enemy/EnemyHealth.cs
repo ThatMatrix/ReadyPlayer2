@@ -34,6 +34,12 @@ public class EnemyHealth : MonoBehaviour
         if (curHealth <= 0)
         {
             FindObjectOfType<AudioManager>().Play("enemy death");
+            if (gameObject.GetComponent<SecticEye>() != null)
+            {
+                gameObject.GetComponent<Animator>().SetTrigger("Dead");
+                FindObjectOfType<AudioManager>().Stop("SepticEyeTheme");
+            }
+            
             if (gameObject.GetComponent<Casper>() != null)
             {
                 gameObject.GetComponent<Casper>().animator.SetBool("Dead",true);
