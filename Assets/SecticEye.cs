@@ -18,6 +18,8 @@ public class SecticEye : MonoBehaviour
     private Animator _animator;
     public float startTimeBtwShots;
 
+
+    private bool GotToStage2;
     public void DoubleShotForce()
     {
         shotsForce = shotsForce * 2;
@@ -26,6 +28,7 @@ public class SecticEye : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GotToStage2 = false;
         shotsForce = initialShotForce;
         FindObjectOfType<AudioManager>().Play("SepticEyeTheme");
         Quaternion droite = new Quaternion(1, 1, 0, 0);
@@ -46,13 +49,15 @@ public class SecticEye : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (_health.curHealth <= hp3rdPhase)
+        if (GotToStage2 && _health.curHealth <= hp3rdPhase)
         {
             _animator.SetTrigger("Third Phase");
         }
-        else if (_health.curHealth <= hp2ndPhase)
+        
+        if (!GotToStage2 && _health.curHealth <= hp2ndPhase)
         {
             _animator.SetTrigger("Second Phase");
+            GotToStage2 = true;
         }
     }
 
@@ -98,5 +103,10 @@ public class SecticEye : MonoBehaviour
             points[5].transform.position, gauche);
         Rigidbody2D RB3 = bullet3.GetComponent<Rigidbody2D>();
         RB3.AddForce(points[5].transform.up * shotsForce, ForceMode2D.Impulse);
+    }
+
+    public void StopTheme()
+    {
+        FindObjectOfType<AudioManager>().Stop("SepticEyeTheme");
     }
 }
