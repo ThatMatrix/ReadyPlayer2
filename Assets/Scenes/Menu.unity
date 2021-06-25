@@ -18001,7 +18001,7 @@ MonoBehaviour:
   m_Follow: {fileID: 0}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 25
+    OrthographicSize: 20.4
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -20344,7 +20344,7 @@ Canvas:
   m_GameObject: {fileID: 1857928012}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 1912782917}
   m_PlaneDistance: 100
   m_PixelPerfect: 1
@@ -20500,8 +20500,8 @@ Camera:
   m_GameObject: {fileID: 1912782915}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 4
-  m_BackGroundColor: {r: 0.058072258, g: 0.30331817, b: 0.8207547, a: 0}
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.05882351, g: 0.6557093, b: 0.81960785, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -20518,7 +20518,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 25
+  orthographic size: 20.4
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
