@@ -15887,7 +15887,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1493566205}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -32.03, y: -9.41, z: 0}
+  m_LocalPosition: {x: -23.4, y: -5.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1809079375}
@@ -17327,10 +17327,35 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8462313492760322250, guid: 9120c53609e6b9e4695991c0060aa0ed,
+        type: 3}
+      propertyPath: maxHealth
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 8462313492760322253, guid: 9120c53609e6b9e4695991c0060aa0ed,
         type: 3}
       propertyPath: viewIdField
       value: 7689955
+      objectReference: {fileID: 0}
+    - target: {fileID: 8462313492760322255, guid: 9120c53609e6b9e4695991c0060aa0ed,
+        type: 3}
+      propertyPath: hp2ndPhase
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 8462313492760322255, guid: 9120c53609e6b9e4695991c0060aa0ed,
+        type: 3}
+      propertyPath: hp3rdPhase
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 8462313492760322255, guid: 9120c53609e6b9e4695991c0060aa0ed,
+        type: 3}
+      propertyPath: shotsForce
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8462313492760322255, guid: 9120c53609e6b9e4695991c0060aa0ed,
+        type: 3}
+      propertyPath: initialShotForce
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 8462313492760322255, guid: 9120c53609e6b9e4695991c0060aa0ed,
         type: 3}

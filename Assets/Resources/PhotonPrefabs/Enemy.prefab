@@ -190,6 +190,7 @@ MonoBehaviour:
   toReset: 0
   cooldownAttack: 0
   damage: 0
+  isFlipped: 0
   leftPatrolPoint: {fileID: 0}
   rightPatrolPoint: {fileID: 0}
   lizardDamage: 10

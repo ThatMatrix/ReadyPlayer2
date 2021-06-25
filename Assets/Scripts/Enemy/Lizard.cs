@@ -30,7 +30,7 @@ public class Lizard : EnemyAI
         {
             return;
         }
-        if (Vector2.Distance(transform.position, target.position) > distance) //Player out of range
+        if (Vector2.Distance(transform.position, target.position) > distance && leftPatrolPoint && rightPatrolPoint) //Player out of range
         {
             if (Vector2.Distance(transform.position, leftPatrolPoint.position) < 2f)
             {
