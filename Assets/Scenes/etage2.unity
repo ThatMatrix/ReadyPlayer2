@@ -372,7 +372,7 @@ GameObject:
   - component: {fileID: 100496559}
   m_Layer: 0
   m_Name: SpawnCouloir
-  m_TagString: Untagged
+  m_TagString: SpawnZone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1258,7 +1258,7 @@ GameObject:
   - component: {fileID: 261665303}
   m_Layer: 0
   m_Name: SpawnSalleDeJeu
-  m_TagString: Untagged
+  m_TagString: SpawnZone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2122,7 +2122,7 @@ GameObject:
   - component: {fileID: 647599935}
   m_Layer: 0
   m_Name: SpawnChambreBB
-  m_TagString: Untagged
+  m_TagString: SpawnZone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3613,7 +3613,7 @@ GameObject:
   - component: {fileID: 1124399762}
   m_Layer: 0
   m_Name: SpawnChambreEnfants
-  m_TagString: Untagged
+  m_TagString: SpawnZone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10471,7 +10471,7 @@ GameObject:
   - component: {fileID: 1281204920}
   m_Layer: 0
   m_Name: SpawnSalleDeBain
-  m_TagString: Untagged
+  m_TagString: SpawnZone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10833,7 +10833,7 @@ GameObject:
   - component: {fileID: 1431570637}
   m_Layer: 0
   m_Name: SpawnChambreParents
-  m_TagString: Untagged
+  m_TagString: SpawnZone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
