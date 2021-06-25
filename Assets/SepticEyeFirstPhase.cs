@@ -31,9 +31,10 @@ public class SepticEyeFirstPhase : StateMachineBehaviour
             }
             else
             {
-                
+                me.ShootFromRight();
             }
-            
+
+            alternate += 1;
             timeBtwShots = animator.GetComponent<SecticEye>().startTimeBtwShots;
         }
         else
