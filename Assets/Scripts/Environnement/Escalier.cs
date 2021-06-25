@@ -17,10 +17,24 @@ public class Escalier : MonoBehaviourPunCallbacks, IOnEventCallback
         PV = GetComponent<PhotonView>();
     }
 
+    void ResurrectPlayers()
+    {
+        GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+        foreach (var player in players)
+        {
+            if (player.GetComponent<Health>() && player.GetComponent<Health>().curHealth <= 0)
+            {
+                player.GetComponent<Health>().HealPlayer(player.GetComponent<Health>().maxHealth);
+            }
+        }
+        Debug.Log("Resurrected all players");
+    }
+
     void OnCollisionEnter2D(Collision2D other)
     {
         Debug.Log("CollisionEnter Escalier");
         Debug.Log($"Tag of collider: {other.gameObject.tag}, is the right tag:{other.gameObject.CompareTag("Player")}");
+        ResurrectPlayers();
         if (other.gameObject.CompareTag("Player"))
         {
             if (!other.gameObject.GetComponent<PhotonView>().Owner.IsMasterClient)
