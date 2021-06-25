@@ -19,10 +19,14 @@ public class PhotonLobby : MonoBehaviourPunCallbacks
     public GameObject cancelButton;
     public GameObject offlineButton;
     public GameObject settingsButton;
+    public GameObject quitButton;
+    
     public List<GameObject> uiGameObjectsMenuBase;
     public List<GameObject> uiGameObjectsSettings;
+    
     public Dropdown resolutionDropdown;
     Resolution[] resolutions;
+    
     public GameObject menuButton;
     public GameObject secondRoomButton;
 
@@ -100,6 +104,7 @@ public class PhotonLobby : MonoBehaviourPunCallbacks
     private void MenuUiListInitialize()
     {
         uiGameObjectsMenuBase = new List<GameObject>();
+        uiGameObjectsSettings.Add(quitButton);
         uiGameObjectsMenuBase.Add(battleButton);
         uiGameObjectsMenuBase.Add(LoadButton);
         uiGameObjectsMenuBase.Add(offlineButton);
@@ -143,6 +148,7 @@ public class PhotonLobby : MonoBehaviourPunCallbacks
         offlineButton.SetActive(false);
         settingsButton.SetActive(true);
         battleButton.SetActive(true);
+        quitButton.SetActive(true);
         LoadButton.SetActive(true);
         secondRoomButton.SetActive(true);
     }
@@ -151,6 +157,7 @@ public class PhotonLobby : MonoBehaviourPunCallbacks
     {
         Debug.Log("BattleButton was clicked");
         battleButton.SetActive(false);
+        quitButton.SetActive(false);
         LoadButton.SetActive(false);
         settingsButton.SetActive(false);
         secondRoomButton.SetActive(false);
@@ -215,6 +222,7 @@ public class PhotonLobby : MonoBehaviourPunCallbacks
         contactButton.SetActive(false); 
         
         battleButton.SetActive(true);
+        quitButton.SetActive(true);
         LoadButton.SetActive(true);
         settingsButton.SetActive(true);
         secondRoomButton.SetActive(true);
@@ -264,6 +272,11 @@ public class PhotonLobby : MonoBehaviourPunCallbacks
         HideAllUiSettings();
         battleButton.SetActive(true);
         settingsButton.SetActive(true);
+    }
+
+    public void QuitButtonClicked()
+    {
+        Application.Quit();
     }
     
     public void SetResolution(int resolutionIndex)
