@@ -185,5 +185,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 3
+  duration: 0.2
   hasBeenBoosted: 0
   boostValue: 0
