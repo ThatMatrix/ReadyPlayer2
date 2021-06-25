@@ -3219,7 +3219,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   data:
-    dataString: UEsDBBQAAAgIAAAIIez9KcM2WAIAAPgEAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVE1z2jAQ/SuMziVjIIHQW2sI6YGQCe3k4ouQ11iDLHn0ESAZ/ntXsoxdekK8fbt6+3blL8KlqYFZpVea52uVA/k+IP5Mvg264DOc6F7JLf+ElvPOc1t6Eg2cN2q5Qnzk04yqwGrOfsi98OQEQSd5oXS1zPeQKmMNwgUVBjCklfXZEqGvATnhz3DuU854Gs/86RNP82RwwSMDaUF31FkkDqd3D5HZEJ1kglY15F51x3+cxoTZPNAk9hMZXjtTQnATxRB7rkOzKa2Nw1aQkHOKzQUF93c+owS+L62X2k/fFIUBG3vX9LzgGl1q6pKfqrGuoubQKPugwgUJD5NpkNVUXf9HGI5CuNCqem4vHiX+EltydnijZ0aN7Znbhxed9lFw6EjFge4EvJcgX9RKKydzDFrtfKozMF50f6+9pSWwQ4c3Um9AV3eWt7NsJ+l7uIT2T6ng1c6H7u4bYCtUsDwsAGgczi8UHNbDxBKIehV/DPym+/4excAT18ZiKHYpvbydctpTyTJ45rtxNlVaQoCj6BokFfb8imXs7QxvYr1rbyJP1L+YeHmMtQ/hJiXAHT9JbkKv6ngdlinVcQ2m3DgruIROtA+8oE+pkrJZsb4nbdrW6YKyXtre8fzf1SKP41mRzMZzOk0m8xGDIWNQwISN2f0OitnjhITd4xL7pOK1ERrtwanJrrjEPWs/JIOVpnVY91zT44p/VqpnOZeF2jINIDdNhatw0HgJPsx8mXM0aAvWchnmTb4yIhQ7QJ5dC2Wh0+XJapp1VTJS8w9lPZKRNHw5MnIhl79QSwMEFAAACAgAAAgh7APY70ZtAAAAeAAAAAkAJABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQGrVipLLSrOzM9TslIw0TPSMzTVUVBKL0osyCgGihiCOKWZKSB2tJKFkXmagbmRZaKZgbGlYXKqbnJyalqqcbJRsklSapq5hbFSLFB9SWVBql9ibipET0BiSUZaZl5KZl66nntRZoo7yGil2FoAUEsBAi0AFAAACAgAAAgh7P0pwzZYAgAA+AQAAAsAJAAAAAAAAAAAAAAAAAAAAGdyYXBoMC5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsBAi0AFAAACAgAAAgh7APY70ZtAAAAeAAAAAkAJAAAAAAAAAAAAAAApQIAAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLBQYAAAAAAgACALgAAABdAwAAAAA=
+    dataString: UEsDBBQAAAgIAAAIIezhzKqNVwIAAPYEAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVE1z2jAQ/SuMziVjIOGjt9YQ0kM+JrSTiy9CXmMNsuTRR4Aw/PeuZBm79GT57dvV27drnwmXpgZmlV5rnj+rHMj3AfFn8m3QBZ/gSHdKbvgXtJwPntvSk2jgvFPLFeIjn2ZUBVZz9kPuhCcnCDrJC6WrVb6DVBlrEC6oMIAhrazPlgidB+SIj+HCp5zwNJ750xeeFsnggkcG0oLuqLNIHE7vHiKzITrJBK1qyL3qjj+fxoTZItAk9hMZXjtTQnATxRB7qkOzKa2Nw1aQkHOKzQUFY3wtge9KG1+uya9FYcDGzjU9LblGj5qq5KdqjKuo2Te6PqlwQcDDZBpENVWf/yMMRyFcaFU9tRePEn+JLTnbv9MTo8b2rO3Dy075KPhzoGJPtwI+SpAvaq2VkzkGrXY+1RkYL7vXa29pCWzf4Y3UG9DVneHtJNs5+h4uof1jKni19aG7+wbYCBUMD+MHjaP5hYLDcphYAlGv4o+B33TX36IYeOTaWAzFLqWXt1VOeypZBc98N86mSksIcBRdg6TCnt6wjL2d4U2sd+1N5JH67yVeHmPtZ3CTEuCOnyQ3oTd1uA7LlOrwDKZ8dVZwCZ1oH3hBn1IlZbNifU/atI3TBWW9tJ3j+b+rRebjWZHMxgs6TSaLEYMhY1DAhI3Z/RaK2XxCwu5xiX1S8dYIjfbg1GRXXOKetb+RwVrTOqx7rulhzb8q1bOcy0JtmAaQr02Fq3DQeAl+lvkq52jQBqzlMsybnDMiFNtDnl0LZaHT1dFqmnVVMlLzT2U9kpE0/DcyciGXv1BLAwQUAAAICAAACCHsA9jvRm0AAAB4AAAACQAkAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAatWKkstKs7Mz1OyUjDRM9IzNNVRUEovSizIKAaKGII4pZkpIHa0koWReZqBuZFlopmBsaVhcqpucnJqWqpxslGySVJqmrmFsVIsUH1JZUGqX2JuKkRPQGJJRlpmXkpmXrqee1FmijvIaKXYWgBQSwECLQAUAAAICAAACCHs4cyqjVcCAAD2BAAACwAkAAAAAAAAAAAAAAAAAAAAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwECLQAUAAAICAAACCHsA9jvRm0AAAB4AAAACQAkAAAAAAAAAAAAAACkAgAAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsFBgAAAAACAAIAuAAAAFwDAAAAAA==
     upgradeData: 
     file_cachedStartup: {fileID: 0}
     data_cachedStartup: 
@@ -7602,7 +7602,6 @@ GameObject:
   - component: {fileID: 1225880684}
   - component: {fileID: 1225880683}
   - component: {fileID: 1225880682}
-  - component: {fileID: 1225880681}
   m_Layer: 9
   m_Name: wall
   m_TagString: Untagged
@@ -7624,32 +7623,6 @@ Transform:
   m_Father: {fileID: 1548731271}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1225880681
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1225880679}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -11.006748, y: 2.9014072}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 22.30767, y: 3.5181465}
-  m_EdgeRadius: 0
 --- !u!19719996 &1225880682
 TilemapCollider2D:
   m_ObjectHideFlags: 0
@@ -26154,12 +26127,12 @@ PrefabInstance:
     - target: {fileID: 5879293905639981991, guid: 946470ed96fffce4c9134888f61bd166,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 19.35
+      value: 14.84
       objectReference: {fileID: 0}
     - target: {fileID: 5879293905639981991, guid: 946470ed96fffce4c9134888f61bd166,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.3725753
+      value: -6.9
       objectReference: {fileID: 0}
     - target: {fileID: 5879293905639981991, guid: 946470ed96fffce4c9134888f61bd166,
         type: 3}
