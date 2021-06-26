@@ -23,9 +23,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5407379489080935545}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.14905658, y: -2.4952195, z: 0}
-  m_LocalScale: {x: 0.88638, y: 0.8764833, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7901002820815632035}
   m_RootOrder: 2
@@ -55,7 +55,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6131514492884173306}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.93, y: -0.19, z: -0.033367634}
+  m_LocalPosition: {x: 1.93, y: 0.5, z: -0.033367634}
   m_LocalScale: {x: 0.2, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7901002820815632035}
@@ -107,7 +107,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7901002820162226302}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.49, y: -0.13, z: -0.033367634}
+  m_LocalPosition: {x: -2.49, y: 0.5, z: -0.033367634}
   m_LocalScale: {x: 0.2, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7901002820815632035}
@@ -151,10 +151,12 @@ GameObject:
   - component: {fileID: 7901002820815632041}
   - component: {fileID: 7901002820815632040}
   - component: {fileID: 7901002820815632043}
-  - component: {fileID: 7901002820815632042}
   - component: {fileID: 6224010365388263543}
   - component: {fileID: 5623695672031340041}
+  - component: {fileID: 2683845581920500096}
   - component: {fileID: -8053422897113326687}
+  - component: {fileID: 8366787563888464878}
+  - component: {fileID: 1033502080655153016}
   m_Layer: 0
   m_Name: PlayerAvatar
   m_TagString: Player
@@ -215,8 +217,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -69791857
-  m_SortingLayer: 3
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 6b0d9aaf45501a344b131e4595115223, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -394,32 +396,6 @@ MonoBehaviour:
     type: 3}
   iceShardForce: 20
   rangeIcePool: 15
---- !u!61 &7901002820815632042
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7901002820815632085}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.10469437, y: 0.30292892}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.5625, y: 5.125}
-    newSize: {x: 2.5625, y: 5.125}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 2.0482864, y: 2.055809}
-  m_EdgeRadius: 0
 --- !u!58 &6224010365388263543
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -430,12 +406,12 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0090408325, y: 1.9431801}
+  m_Offset: {x: 0.009034334, y: 4.328312}
   serializedVersion: 2
-  m_Radius: 0.5199013
+  m_Radius: 0.6101319
 --- !u!61 &5623695672031340041
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -446,13 +422,13 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.063266754, y: -1.5997353}
+  m_Offset: {x: 0.01763916, y: 0.8176197}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.5, y: 0.035}
     oldSize: {x: 2.5625, y: 5.125}
     newSize: {x: 2.5625, y: 5.125}
     adaptiveTilingThreshold: 0.5
@@ -460,7 +436,33 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.0578842, y: 1.7086105}
+  m_Size: {x: 1.2795272, y: 1.8504231}
+  m_EdgeRadius: 0
+--- !u!61 &2683845581920500096
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7901002820815632085}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.065612555, y: 2.6654017}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.035}
+    oldSize: {x: 2.5625, y: 5.125}
+    newSize: {x: 2.5625, y: 5.125}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.2782464, y: 2.1603675}
   m_EdgeRadius: 0
 --- !u!114 &-8053422897113326687
 MonoBehaviour:
@@ -479,3 +481,43 @@ MonoBehaviour:
   invincible: 0
   timeOfInvincibility: 0
   hp: {fileID: 0}
+--- !u!61 &8366787563888464878
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7901002820815632085}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.015015304, y: 0.116524115}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.035}
+    oldSize: {x: 2.5625, y: 5.125}
+    newSize: {x: 2.5625, y: 5.125}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.1507684, y: 0.39144573}
+  m_EdgeRadius: 0
+--- !u!114 &1033502080655153016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7901002820815632085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42800e10d88f83a42855c5c2ba27bcda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offset: 0
+  Object: {fileID: 7901002820815632035}
