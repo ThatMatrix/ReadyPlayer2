@@ -63,8 +63,10 @@ public class Bullet : MonoBehaviour
         {
             if (col.GetComponent<Health>() != null)
                 col.GetComponent<Health>().DamagePlayer(damage);
-            if (PV && ( PV.IsMine))
-                PhotonNetwork.Destroy(this.gameObject);
+            if (PhotonNetwork.IsMasterClient || PV.AmOwner || PV.IsMine)
+            {
+                PhotonNetwork.Destroy(gameObject);
+            }
         }
     }
 }
