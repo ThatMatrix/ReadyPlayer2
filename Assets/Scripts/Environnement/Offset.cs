@@ -17,6 +17,6 @@ public class Offset : MonoBehaviour
     void Update()
     {
         if (sprite && Object)
-            sprite.sortingOrder = 100 - (int) Object.position.y + offset;
+            sprite.sortingOrder = 10000 - (int) (Object.position.y * 100) + offset;
     }
 }

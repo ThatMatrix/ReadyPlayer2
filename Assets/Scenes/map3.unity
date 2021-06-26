@@ -11005,7 +11005,7 @@ GameObject:
   m_Component:
   - component: {fileID: 482156333}
   - component: {fileID: 482156334}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: down-right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11067,9 +11067,11 @@ EdgeCollider2D:
   - {x: 6.0707474, y: 13.090791}
   - {x: 8.1238365, y: 13.124379}
   - {x: 8.118423, y: 11.15332}
-  - {x: 10.039066, y: 11.129477}
+  - {x: 14.624771, y: 11.165871}
   - {x: 9.961674, y: 7.2412415}
-  - {x: -15.923819, y: -10.944378}
+  - {x: -14.638348, y: -14.075321}
+  - {x: -15.983919, y: -14.945307}
+  - {x: -15.944431, y: -10.759705}
 --- !u!1 &495056076
 GameObject:
   m_ObjectHideFlags: 0
@@ -11080,7 +11082,7 @@ GameObject:
   m_Component:
   - component: {fileID: 495056077}
   - component: {fileID: 495056078}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: up-left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11095,7 +11097,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 495056076}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -24.9, y: 32.6, z: 0}
+  m_LocalPosition: {x: -24.91, y: 28.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1661729767}
@@ -11117,7 +11119,7 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -12.233028, y: -13.751561}
+  - {x: -15.847904, y: -13.781436}
   - {x: -8.367292, y: -13.75253}
   - {x: -8.294949, y: -15.627659}
   - {x: -6.2779713, y: -15.633567}
@@ -11143,10 +11145,10 @@ EdgeCollider2D:
   - {x: 17.70988, y: 6.3229675}
   - {x: 17.700212, y: 8.28071}
   - {x: 15.638086, y: 8.308966}
-  - {x: 15.682642, y: 12.343784}
-  - {x: 11.613977, y: 12.400843}
-  - {x: -12.232437, y: -7.9381256}
-  - {x: -12.252525, y: -13.497267}
+  - {x: 15.623904, y: 20.978249}
+  - {x: 4.5654345, y: 21.74016}
+  - {x: -14.443188, y: -7.7887497}
+  - {x: -15.449154, y: -14.483142}
 --- !u!1 &517543783
 GameObject:
   m_ObjectHideFlags: 0
@@ -15451,7 +15453,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1258320876}
   - component: {fileID: 1258320877}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: down-left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15482,14 +15484,14 @@ EdgeCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
   - {x: -9.222317, y: 7.529585}
-  - {x: -9.230486, y: 11.431405}
+  - {x: -12.72958, y: 11.55418}
   - {x: -7.2892113, y: 11.473595}
   - {x: -7.3361206, y: 13.407663}
   - {x: -5.341461, y: 13.462567}
@@ -15515,7 +15517,8 @@ EdgeCollider2D:
   - {x: 18.644903, y: -8.531452}
   - {x: 18.669638, y: -10.5386715}
   - {x: 16.800549, y: -10.531956}
-  - {x: -9.255394, y: 7.5172005}
+  - {x: 16.41826, y: -17.49968}
+  - {x: -9.385767, y: 7.8561707}
 --- !u!1 &1277122931
 GameObject:
   m_ObjectHideFlags: 0
@@ -16279,7 +16282,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   data:
-    dataString: UEsDBBQAAAgIAAAIIeyn0e6uVwIAAPcEAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVMty4jAQ/BVK503KBhLC3nYdQvaQQIVs5eKLsMZYhSy59AiPFP++I9nGjveE6O4Z9TzkL8KlqSCzSi81Zy+KAfk5Iv5Mfow68hmOdKfkhp+h1XxwZgsvokHzRi1XiMc+zKgSrObZL7kTXhwh6CTPlS4XbAeJMtYgnFNhACmtrI+WCH2NyBF/buY+5ISn8cyfzniaR6MLHjOQFnQnvW+F00ZXy5zMBC0rYN5zp46jaaOPxw9BKLGeRjP26ZUQ3DRmiD1VodiEVsZhKShgnGJxwUF8+4BAAXxX2GH4Ks8N2KZ2TU+PXGOX6rzkt6pbV1Kzr719UuH8TfHd5D7YqrO+/Ce4iQOda1U+txfHkb/EFjzbv9FTRo3tNbcPP/a8hx4dqNjTrYCPAuSrWmrlJEPSaudDnYHxY/f3WltSQLbv8NrqAHRV1/R2lu0kfQ2XUP4xEbzceup2WgMboULLwwKAxuH8QcNhPUyTAlHv4q+Bd7rr71FDPHFtLFJNldLb2yqnvZQsQs98Nc4mSksIcGO6AkmFPa0xjR3OcMD1rh0wT9S/mObyhmsfwiAkwJ0+igbUWh2uwzKFOryAKVbOCi6hM+2JV+xToqSsV8x8J33UxumcZr2onePs+2YRts0gmk7iSQSM3s3pDcwnk9k0nzzk2+x+Fm1JWD0usUwq1rXPpjs4NNkll7hm7XdktNS0CtvOND0s+blUPX9c5mqTaQC5qjO0HTKg8RJ8l2zBOPZnA9ZyGcZNvlIiVLYHll4TpaHSxdFqmnZZUlLxT2U9kpIkfDhSciGXf1BLAwQUAAAICAAACCHsA/seEm0AAAB4AAAACQAkAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAatWKkstKs7Mz1OyUjDRM9IzNNVRUEovSizIKAaKGII4pZkpIHa0UkpScqqBibGhsUFqSqKpZaJuqqWxsblJmrFFWlKymblBklIsUH1JZUGqX2JuKkRPQGJJRlpmXkpmXrqee1FmijvIaKXYWgBQSwECLQAUAAAICAAACCHsp9HurlcCAAD3BAAACwAkAAAAAAAAAAAAAAAAAAAAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwECLQAUAAAICAAACCHsA/seEm0AAAB4AAAACQAkAAAAAAAAAAAAAACkAgAAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsFBgAAAAACAAIAuAAAAFwDAAAAAA==
+    dataString: UEsDBBQAAAgIAAAIIewcCHYQZQIAAAUFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVE1z4jAM/SuMz9tOIBTK3nZTSvfQjynd6SUXEyvEg2Nn/FGgHf77yo5DUvaEkPSk9yQ5X4RL00BhlV5pzh4VA/JzRLxNfoz64AMc6FbJNf+ELuedM1v5JBpyXqnlCv1jDzOqBqt58UtuhU9O0OkkL5Wul2wLmTLWoLukwgCGtLIeLdH1NSIH/LlaeMgRrcncW59oLZLRCc0CpAXdp06v0+Q2uZnF/OR6ks7SZHYzSyOuhTlZCFo3wLyGHj2fRNx8EtIkqosZyfWtb6eE4CaSI/bYBPEZbYxDaZjAOEWxgZHXXgHfVtYTH4Kfy9KAjZPQ9HjHNc6srUp+q3aQNTW7ltkHFc73Gc8XLa226uN/CVfjEC61qh+6xuPEN7EVL3av9FhQYwejHrrvvjN3ck/Fjm4EvFcgn9RKKycZBq12HuoMTO76v2dtWQXFrve3VC+crulH3m2226vXcAryD5ng9SaMfto61kKFgYdzAI3L+YOEw7GYWAK9nsVfA290O7yqGLjn2lgMRZXS09sop30qWYaZeTXOZkpLCO5IugFJhT2+YBl7ucOL2KDtReSe+vcTm8dY9ywuIMHd5yfJRehF7c/LMpXaP4Kpnp0VXEJP2geecE6ZkrI9MfM96FFrp0taDFBbx9n3yyJsU0AyTcdpAozeLOgVLNJ0Pi3T23JTzObJhoTT4xJlUvHS8ozTwaXJvrjEM+u+KqOVpk24dqbpfsU/azXgx2Wp1oUGkM9thW5CBjQ2wXfJlozjfNZgLZdh3eQrJ0IVO2D5uVAelC4PVtO8r5KThn8o6z05ycJnJCcncvoHUEsDBBQAAAgIAAAIIewD+x4SbQAAAHgAAAAJACQAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1YqSy0qzszPU7JSMNEz0jM01VFQSi9KLMgoBooYgjilmSkgdrRSSlJyqoGJsaGxQWpKoqllom6qpbGxuUmasUVaUrKZuUGSUixQfUllQapfYm4qRE9AYklGWmZeSmZeup57UWaKO8hopdhaAFBLAQItABQAAAgIAAAIIewcCHYQZQIAAAUFAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAAAIIewD+x4SbQAAAHgAAAAJACQAAAAAAAAAAAAAALICAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAIAAgC4AAAAagMAAAAA
     upgradeData: 
     file_cachedStartup: {fileID: 0}
     data_cachedStartup: 
@@ -16589,7 +16592,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1637549333}
   - component: {fileID: 1637549334}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: up-right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16628,7 +16631,7 @@ EdgeCollider2D:
   m_Points:
   - {x: -9.6074, y: 12.33094}
   - {x: 14.588432, y: -7.9070425}
-  - {x: 14.50267, y: -13.649686}
+  - {x: 17.420845, y: -13.649686}
   - {x: 10.488743, y: -13.736752}
   - {x: 10.513927, y: -15.753501}
   - {x: 8.393963, y: -15.716441}
@@ -16654,7 +16657,7 @@ EdgeCollider2D:
   - {x: -15.561007, y: 6.348381}
   - {x: -15.517429, y: 8.34338}
   - {x: -13.564365, y: 8.348196}
-  - {x: -13.500544, y: 12.351419}
+  - {x: -13.750674, y: 23.106958}
   - {x: -9.637798, y: 12.32448}
 --- !u!1 &1644630921
 GameObject:
