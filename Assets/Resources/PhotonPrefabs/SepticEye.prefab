@@ -16,6 +16,8 @@ GameObject:
   - component: {fileID: 8462313492760322253}
   - component: {fileID: 8462313492760322254}
   - component: {fileID: 8462313492760322255}
+  - component: {fileID: 9130708203386764508}
+  - component: {fileID: 5450823220297673464}
   m_Layer: 0
   m_Name: SepticEye
   m_TagString: Enemy
@@ -101,18 +103,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.07039118, y: -0.27131462}
+  m_Offset: {x: 0.07196629, y: 0.3280128}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 7.21, y: 10.653843}
+    pivot: {x: 0.5, y: 0.0095}
+    oldSize: {x: 7.85, y: 11.00397}
     newSize: {x: 3.69, y: 4.53}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.4263325, y: 10.005604}
+  m_Size: {x: 4.426242, y: 0.5846985}
   m_EdgeRadius: 0
 --- !u!114 &8462313492760322250
 MonoBehaviour:
@@ -209,3 +211,55 @@ MonoBehaviour:
   - {fileID: 0}
   initialShotForce: 0
   startTimeBtwShots: 2
+--- !u!114 &9130708203386764508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 131985109845954519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42800e10d88f83a42855c5c2ba27bcda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offset: 0
+  Object: {fileID: 1962936393595238808}
+--- !u!68 &5450823220297673464
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 131985109845954519}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.2, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -2.4127336, y: 0.0021619126}
+  - {x: -2.417296, y: 2.8260186}
+  - {x: -3.5977747, y: 3.4273999}
+  - {x: -3.61367, y: 3.6856136}
+  - {x: -1.5797727, y: 3.6955383}
+  - {x: -1.8517632, y: 5.9644694}
+  - {x: -2.6890688, y: 6.273007}
+  - {x: -3.304626, y: 6.821597}
+  - {x: -3.9221258, y: 9.123256}
+  - {x: -3.308575, y: 10.533599}
+  - {x: -0.30269146, y: 11.014734}
+  - {x: 3.6477811, y: 10.52993}
+  - {x: 4.0400467, y: 9.280649}
+  - {x: 3.6793344, y: 7.5506797}
+  - {x: 2.8041458, y: 6.2448716}
+  - {x: 1.496018, y: 5.9426394}
+  - {x: 0.72936845, y: 3.687425}
+  - {x: 3.3063962, y: 3.7060683}
+  - {x: 3.2554982, y: 3.270357}
+  - {x: 2.0835521, y: 2.8912442}
+  - {x: 2.107308, y: -0.0013599396}
+  - {x: -2.4462843, y: 0.010664159}

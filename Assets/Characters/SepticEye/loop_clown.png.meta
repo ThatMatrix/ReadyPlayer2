@@ -108,12 +108,12 @@ TextureImporter:
       name: loop_clown_0
       rect:
         serializedVersion: 2
-        x: 57
-        y: 2208
-        width: 700
-        height: 1085
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 2200
+        width: 785
+        height: 1100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0095}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -129,12 +129,12 @@ TextureImporter:
       name: loop_clown_1
       rect:
         serializedVersion: 2
-        x: 842
-        y: 2208
-        width: 714
-        height: 1064
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 785
+        y: 2200
+        width: 785
+        height: 1100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0095}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -150,12 +150,12 @@ TextureImporter:
       name: loop_clown_2
       rect:
         serializedVersion: 2
-        x: 38
-        y: 1108
-        width: 704
-        height: 1044
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 1100
+        width: 785
+        height: 1100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0095}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -171,12 +171,12 @@ TextureImporter:
       name: loop_clown_3
       rect:
         serializedVersion: 2
-        x: 792
-        y: 1108
-        width: 735
-        height: 1025
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 785
+        y: 1100
+        width: 785
+        height: 1100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0095}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -192,12 +192,12 @@ TextureImporter:
       name: loop_clown_4
       rect:
         serializedVersion: 2
-        x: 38
-        y: 7
-        width: 704
-        height: 1044
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 0
+        width: 785
+        height: 1100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0095}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -213,12 +213,12 @@ TextureImporter:
       name: loop_clown_5
       rect:
         serializedVersion: 2
-        x: 842
-        y: 7
-        width: 721
-        height: 1065
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 785
+        y: 0
+        width: 785
+        height: 1100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0095}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
