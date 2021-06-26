@@ -40,6 +40,11 @@ public class EnemyHealth : MonoBehaviour
                 gameObject.GetComponent<Animator>().SetTrigger("Dead");
                 FindObjectOfType<AudioManager>().Stop("SepticEyeTheme");
             }
+
+            if (gameObject.GetComponent<Matt>() != null)
+            {
+                FindObjectOfType<AudioManager>().Stop("MattTheme");
+            }
             
             if (gameObject.GetComponent<Casper>() != null)
             {

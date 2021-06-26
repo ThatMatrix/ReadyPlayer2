@@ -64,8 +64,9 @@ public class AudioManager : MonoBehaviour
 
     public void GameSetupPlay()
     {
-        Sound s = Array.Find(sounds, sound => sound.name == "CasperTheme");
-        if (!s.source.isPlaying)
+        Sound s1 = Array.Find(sounds, sound => sound.name == "CasperTheme");
+        Sound s2 = Array.Find(sounds, sound => sound.name == "MattTheme");
+        if (!s1.source.isPlaying && !s2.source.isPlaying)
         {
             Play("UsualStage");
         }
