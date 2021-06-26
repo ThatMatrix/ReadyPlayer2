@@ -58,12 +58,15 @@ public class Casper : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        FindObjectOfType<AudioManager>().Play("CasperTheme");
+        
         timeBtwShots = startTimeBtwShots;
         sprite = gameObject.GetComponent<SpriteRenderer>();
         animator.SetBool("Dead", false);
         //offset = firePoint.transform.position - animator.GetComponent<Transform>().position;
         newPos = spots[2];
         PV = GetComponent<PhotonView>();
+        FindObjectOfType<AudioManager>().Stop("UsualStage");
     }
 
     // Update is called once per frame
