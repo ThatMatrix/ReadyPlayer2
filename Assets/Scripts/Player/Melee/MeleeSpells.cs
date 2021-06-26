@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Pathfinding;
 using Photon.Pun;
+using Photon.Realtime;
 using Unity.Mathematics;
 using UnityEngine;
 using Path = System.IO.Path;
@@ -22,6 +23,8 @@ public class MeleeSpells : PlayerSpells
     public GameObject droiteBas;
     public GameObject gaucheBas;
     public GameObject gaucheHaut;
+
+    public GameObject circleColl;
 
     public bool HasBeenBoosted = false;
         public void SetRotations()
@@ -68,8 +71,6 @@ public class MeleeSpells : PlayerSpells
 
         GetComponent<ShotGunDash>().enabled = true;
         
-        
-        Attack(movement.x > 0);
     }
 
     public override void SecondarySpell()
@@ -168,8 +169,9 @@ public class MeleeSpells : PlayerSpells
     }
     
     
-    public void Attack(bool right)
+    public void Attack()
     {
+        right = GetComponent<PlayerMovement>().GetMovement().x > 0;
         Debug.Log("Attack melee facing right :" + right);
         Vector3 pos = transform.position;
         if (right)
@@ -181,15 +183,20 @@ public class MeleeSpells : PlayerSpells
             pos += transform.right * -attackOffset.x;
         }
         pos += transform.up * attackOffset.y;
-        
-        Collider2D colInfo = Physics2D.OverlapCircle(pos, attackRange, attackMask);
-        if (colInfo != null && colInfo.CompareTag("Enemy"))
-        {
-            colInfo.GetComponent<EnemyHealth>().DamageEnemy(attackDamage);
-            Debug.Log("Attack done");
-        }
+        circleColl.transform.position = pos;
+        circleColl.SetActive(true);
+        // Collider2D colInfo = Physics2D.OverlapCircle(pos, attackRange, attackMask);
+        // if (colInfo != null && colInfo.CompareTag("Enemy"))
+        // {
+        //     colInfo.GetComponent<EnemyHealth>().DamageEnemy(attackDamage);
+        //     Debug.Log("Attack done");
+        // }
     }
-    
+
+    public void EndAttack()
+    {
+        circleColl.SetActive(false);
+    }
     void OnDrawGizmosSelected()
     {
         Vector3 pos = transform.position;
