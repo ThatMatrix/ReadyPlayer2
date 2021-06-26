@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 using Photon.Pun;
 using UnityEngine.SceneManagement;
@@ -12,6 +13,7 @@ public class MenuPause : MonoBehaviourPun
 
     public GameObject menuPause;
 
+    public GameObject gameSaved;
     //public GameObject disconnectButton;
     //public GameObject saveButton;
 
@@ -23,7 +25,7 @@ public class MenuPause : MonoBehaviourPun
         //disconnectButton.SetActive(false);
         DeactivateAllButtons();
         menuPause.SetActive(false);
-        
+        gameSaved.SetActive(false);
     }
 
     // Update is called once per frame
@@ -35,16 +37,15 @@ public class MenuPause : MonoBehaviourPun
             if (!paused)
             {
                 menuPause.SetActive(true);
-                //disconnectButton.SetActive(true);
                 ActivateAllButtons();
                 DisablePlayer();
             }
             else
             {
                 DeactivateAllButtons();
-                //disconnectButton.SetActive(false);
+                gameSaved.SetActive(false);
                 menuPause.SetActive(false);
-                
+
                 if (player != null)
                 {
                     player.SetActive(true);
@@ -138,5 +139,12 @@ public class MenuPause : MonoBehaviourPun
         PlayerPrefs.SetInt("SceneIndex", sceneIndex);
         PlayerPrefs.SetInt("PlayerType", playerType);
         Debug.Log($"Game Saved: SceneIndex = {sceneIndex}, PlayerType = {(PlayerType) playerType}");
+
+        PopGameSaved();
+    }
+
+    void PopGameSaved()
+    {
+        gameSaved.SetActive(true);
     }
 }
