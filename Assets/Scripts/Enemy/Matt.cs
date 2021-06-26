@@ -12,7 +12,10 @@ public class Matt : MonoBehaviour
 
     public Transform player;
 
-    
+    public void Start()
+    {
+        FindObjectOfType<AudioManager>().Play("MattTheme");
+    }
 
     private void Update()
     {

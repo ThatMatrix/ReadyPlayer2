@@ -54,9 +54,22 @@ public class AudioManager : MonoBehaviour
             Debug.LogWarning("Sound: " + name + " not found!");
             return;
         }
-        
-        s.source.Play();
+
+        if (!s.source.isPlaying)
+        {
+            s.source.Play();
+        }
         Debug.Log("Played sound: " + s.name);
+    }
+
+    public void GameSetupPlay()
+    {
+        Sound s1 = Array.Find(sounds, sound => sound.name == "CasperTheme");
+        Sound s2 = Array.Find(sounds, sound => sound.name == "MattTheme");
+        if (!s1.source.isPlaying && !s2.source.isPlaying)
+        {
+            Play("UsualStage");
+        }
     }
     
     public void Stop(string name)
