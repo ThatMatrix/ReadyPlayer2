@@ -60,16 +60,11 @@ public class BoostDamage : MonoBehaviour
                         projectile.boostValue = valueOfBoost;
                     }
                 }
-                else
-                {
-                    throw new NotImplementedException("did not implement the management of this ally shot");
-                }
             }
         }
         else if (hasBeenActivated)
         {
             Debug.Log("Boost damage ended");
-
             DeleteObject(PVOfActivator);
         }
     }
@@ -88,6 +83,10 @@ public class BoostDamage : MonoBehaviour
             {
                 _typeOfPlayer = TypeOfPlayer.MIDRANGE;
             }
+            else if (other.GetComponent<MeleeSpells>() != null)
+            {
+                GetComponent<MeleeSpells>().attackDamage += valueOfBoost;
+            }
             else
             {
                 throw new NotImplementedException("not implemented this type of player");
@@ -104,7 +103,7 @@ public class BoostDamage : MonoBehaviour
     private void DeleteObject(PhotonView PV)
     {
         PV.TransferOwnership(PV.Controller);
-            
+        
         if (PV != null && PV.IsMine)
         {
             PhotonNetwork.Destroy(gameObject);

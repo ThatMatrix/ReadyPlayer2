@@ -1,9 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using System.IO;
+using Pathfinding;
 using Photon.Pun;
 using Unity.Mathematics;
 using UnityEngine;
+using Path = System.IO.Path;
 
 public class MeleeSpells : PlayerSpells
 {
@@ -22,7 +23,8 @@ public class MeleeSpells : PlayerSpells
     public GameObject gaucheBas;
     public GameObject gaucheHaut;
 
-    public void SetRotations()
+    public bool HasBeenBoosted = false;
+        public void SetRotations()
     {
         haut.transform.rotation = new Quaternion(0, 1, 0, 0);
         bas.transform.rotation = new Quaternion(1, 0, 0, 0);

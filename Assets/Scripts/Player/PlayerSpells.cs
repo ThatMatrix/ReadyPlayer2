@@ -35,7 +35,8 @@ public abstract class PlayerSpells : MonoBehaviour
     public float cooldownU;
     public float nextUltimate;
 
-    void Start()
+
+    protected void Start()
     {
         _animator = gameObject.GetComponent<Animator>();
         PV = GetComponent<PhotonView>();
