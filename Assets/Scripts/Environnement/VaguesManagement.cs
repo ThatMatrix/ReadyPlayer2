@@ -63,7 +63,10 @@ public class VaguesManagement : MonoBehaviour
 
     private void Start()
     {
-        Boss.SetActive(false);
+        if (!(Boss == null))
+        {
+            Boss.SetActive(false);
+        }
         
         if (nbMobWave.Max() < spawnPoints.Length)
         {
@@ -90,7 +93,7 @@ public class VaguesManagement : MonoBehaviour
     private void Update()
     {
         canSpawn = HaveToDelete();
-        if (canSpawn && !HasEnemiesLeftOnTheMap())
+        if (canSpawn && (!HasEnemiesLeftOnTheMap() || curWave == 0))
         {
             Debug.Log("No enemies left on the map, incrementing the wave");
             curWave += 1;
@@ -122,6 +125,11 @@ public class VaguesManagement : MonoBehaviour
 
     void SpawnBossWave()
     {
+        if (Boss is null)
+        {
+            curWave += 1;
+            return;
+        }
         Boss.SetActive(true);
     }
 }
