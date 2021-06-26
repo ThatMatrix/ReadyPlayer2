@@ -337,7 +337,7 @@ GameObject:
   - component: {fileID: 41408255}
   - component: {fileID: 41408254}
   m_Layer: 10
-  m_Name: armoire bedroom
+  m_Name: armoire bedroom coll only
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1245,6 +1245,7 @@ GameObject:
   - component: {fileID: 264150875}
   - component: {fileID: 264150877}
   - component: {fileID: 264150876}
+  - component: {fileID: 264150878}
   m_Layer: 10
   m_Name: armoire baby
   m_TagString: Untagged
@@ -1368,6 +1369,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.7419167, y: 4.403926}
   m_EdgeRadius: 0
+--- !u!114 &264150878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 264150873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42800e10d88f83a42855c5c2ba27bcda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offset: 0
+  Object: {fileID: 264150874}
 --- !u!1 &283361570
 GameObject:
   m_ObjectHideFlags: 0
@@ -1706,6 +1721,7 @@ GameObject:
   - component: {fileID: 371154939}
   - component: {fileID: 371154941}
   - component: {fileID: 371154940}
+  - component: {fileID: 371154942}
   m_Layer: 10
   m_Name: armoire playroom
   m_TagString: Untagged
@@ -1829,6 +1845,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.7419167, y: 4.403926}
   m_EdgeRadius: 0
+--- !u!114 &371154942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 371154937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42800e10d88f83a42855c5c2ba27bcda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offset: 0
+  Object: {fileID: 371154938}
 --- !u!1 &405781180
 GameObject:
   m_ObjectHideFlags: 0
@@ -3090,6 +3120,7 @@ GameObject:
   - component: {fileID: 917900545}
   - component: {fileID: 917900547}
   - component: {fileID: 917900546}
+  - component: {fileID: 917900548}
   m_Layer: 10
   m_Name: baby bed
   m_TagString: Untagged
@@ -3105,7 +3136,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 917900543}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.81, y: 39.48, z: 0}
+  m_LocalPosition: {x: 2.08, y: 47.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6051827}
@@ -3213,6 +3244,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 6.944003, y: 1.6865196}
   m_EdgeRadius: 0
+--- !u!114 &917900548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 917900543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42800e10d88f83a42855c5c2ba27bcda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offset: 0
+  Object: {fileID: 917900544}
 --- !u!1 &966993848
 GameObject:
   m_ObjectHideFlags: 0
@@ -3515,6 +3560,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   paused: 0
   menuPause: {fileID: 245585820}
+  gameSaved: {fileID: 0}
   listButtons:
   - {fileID: 1712878800}
   - {fileID: 910783586}
