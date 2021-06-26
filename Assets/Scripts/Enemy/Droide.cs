@@ -8,6 +8,7 @@ public class Droide : MonoBehaviour
     private float fireRate;
     private float nextFire;
     public bool isFlipped = false;
+    [SerializeField] private Transform spawn;
     private Transform target;
     // Start is called before the first frame update
     void Start()
@@ -67,7 +68,7 @@ public class Droide : MonoBehaviour
     {
         if (Time.time > nextFire)
         {
-            Instantiate(shoot, transform.position, Quaternion.identity);
+            Instantiate(shoot, spawn.position, Quaternion.identity);
             nextFire = Time.time + fireRate;
         }
     }

@@ -22,10 +22,21 @@ public class Bullet : MonoBehaviour
         PV = GetComponent<PhotonView>();
         rb = GetComponent<Rigidbody2D>();
         target = SelectTarget();
-        Vector2 moveDirection = (target.position - transform.position).normalized * movespeed;
-        if (moveDirection.x < 0)
-            sprite.flipX = true;
-        rb.velocity = new Vector2(moveDirection.x, moveDirection.y);
+        Transform center = target.transform.GetChild(0).gameObject.transform;
+        if (center != null)
+        {
+            Vector2 moveDirection = (center.position - transform.position).normalized * movespeed;
+            if (moveDirection.x < 0)
+                sprite.flipX = true;
+            rb.velocity = new Vector2(moveDirection.x, moveDirection.y);
+        }
+        else
+        {
+            if (PhotonNetwork.IsMasterClient || PV.AmOwner || PV.IsMine)
+            {
+                PhotonNetwork.Destroy(gameObject);
+            }
+        }
     }
 
     void Update()

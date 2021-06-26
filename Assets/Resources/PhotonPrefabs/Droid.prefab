@@ -15,9 +15,11 @@ GameObject:
   - component: {fileID: 1862481707348992445}
   - component: {fileID: 6870110452796931741}
   - component: {fileID: -2334522601640247459}
+  - component: {fileID: 8531885981964753082}
+  - component: {fileID: 2748066540733032573}
   m_Layer: 0
   m_Name: Droid
-  m_TagString: Enemy
+  m_TagString: Droid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32,7 +34,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.74, y: -18.28, z: 0}
   m_LocalScale: {x: 0.12905219, y: 0.12905219, z: 0.12905219}
-  m_Children: []
+  m_Children:
+  - {fileID: 1885918476714882224}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -99,21 +102,26 @@ EdgeCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 23}
   m_EdgeRadius: 0
   m_Points:
   - {x: 18.192102, y: -23.651772}
   - {x: 18.031279, y: -22.99551}
   - {x: -12.3076105, y: -23.139389}
+  - {x: -12.092839, y: -19.24196}
+  - {x: -11.769765, y: -15.682913}
   - {x: -11.449706, y: -8.765896}
-  - {x: -16.349234, y: 7.6081586}
-  - {x: -7.1143355, y: 8.039844}
-  - {x: -4.9307065, y: 22.70341}
-  - {x: 9.083904, y: 22.994251}
-  - {x: 12.775988, y: 4.7717624}
-  - {x: 7.925107, y: 3.6080263}
-  - {x: 12.495383, y: -10.168398}
-  - {x: 17.050797, y: -22.549055}
+  - {x: -9.103893, y: -1.5116768}
+  - {x: -15.709463, y: 2.881607}
+  - {x: -16.349234, y: 7.608158}
+  - {x: -7.1143355, y: 8.0398445}
+  - {x: -7.0768623, y: 22.464943}
+  - {x: 9.083904, y: 24.425018}
+  - {x: 12.775988, y: 4.771763}
+  - {x: 9.355879, y: 3.846489}
+  - {x: 10.110768, y: -8.260713}
+  - {x: 16.893578, y: -16.425472}
+  - {x: 17.050797, y: -23.74136}
 --- !u!114 &1215701865830848087
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -167,6 +175,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shoot: {fileID: 4791882047589075227, guid: 74966d00e74d5304ea54d67c4ca479a2, type: 3}
   isFlipped: 0
+  spawn: {fileID: 1885918476714882224}
 --- !u!114 &-2334522601640247459
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -181,3 +190,73 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   curHealth: 0
   maxHealth: 20
+--- !u!114 &8531885981964753082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 421674397005301489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42800e10d88f83a42855c5c2ba27bcda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offset: 0
+  Object: {fileID: 4313611398223032964}
+--- !u!61 &2748066540733032573
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 421674397005301489}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 2.4038315, y: 3.0658646}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 32.751705, y: 46.899998}
+    newSize: {x: 32.751705, y: 46.899998}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 27.944046, y: 6.1317444}
+  m_EdgeRadius: 0
+--- !u!1 &7237398216577082584
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1885918476714882224}
+  m_Layer: 0
+  m_Name: spawn bullet
+  m_TagString: SpawnZone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1885918476714882224
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7237398216577082584}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.2, y: 27, z: 0}
+  m_LocalScale: {x: 7.748803, y: 7.748803, z: 7.748803}
+  m_Children: []
+  m_Father: {fileID: 4313611398223032964}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
