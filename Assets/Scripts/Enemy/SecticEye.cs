@@ -30,6 +30,7 @@ public class SecticEye : MonoBehaviour
     {
         GotToStage2 = false;
         shotsForce = initialShotForce;
+        FindObjectOfType<AudioManager>().Stop("UsualStage");
         FindObjectOfType<AudioManager>().Play("SepticEyeTheme");
         Quaternion droite = new Quaternion(1, 1, 0, 0);
         points[0].transform.rotation = droite;
@@ -40,6 +41,7 @@ public class SecticEye : MonoBehaviour
         points[3].transform.rotation = gauche;
         points[4].transform.rotation = gauche;
         points[5].transform.rotation = gauche;
+        points[6].transform.rotation = gauche;
         
         _animator = GetComponent<Animator>();
         PV = gameObject.GetComponent<PhotonView>();
@@ -103,6 +105,11 @@ public class SecticEye : MonoBehaviour
             points[5].transform.position, gauche);
         Rigidbody2D RB3 = bullet3.GetComponent<Rigidbody2D>();
         RB3.AddForce(points[5].transform.up * shotsForce, ForceMode2D.Impulse);
+        
+        GameObject bullet4 = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "Tear (SepticEye)"),
+            points[6].transform.position, gauche);
+        Rigidbody2D RB4 = bullet4.GetComponent<Rigidbody2D>();
+        RB4.AddForce(points[6].transform.up * shotsForce, ForceMode2D.Impulse);
     }
 
     public void StopTheme()

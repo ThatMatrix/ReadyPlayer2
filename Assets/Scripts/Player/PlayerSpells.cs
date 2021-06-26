@@ -62,7 +62,6 @@ public abstract class PlayerSpells : MonoBehaviour
                 
                 ChooseFirePoint();
                 
-                Debug.Log("firePoint passed");
                 
                 if (Input.GetButtonDown("Fire1") && Time.time > nextSpell1)
                 {
@@ -72,7 +71,6 @@ public abstract class PlayerSpells : MonoBehaviour
 
                 if ((Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.RightShift)) && Time.time > nextMovement)
                 {
-                    Debug.Log("Got to movement Spell");
                     MovementSpell();
                     nextMovement = Time.time + cooldownM;
                 }
@@ -83,10 +81,10 @@ public abstract class PlayerSpells : MonoBehaviour
                     nextSpell2 = Time.time + cooldown2;
                 }
 
-                if (Input.GetKeyDown(KeyCode.R) && Time.time > nextUltimate)
+                if (Input.GetKeyDown(KeyCode.E) && Time.time > nextUltimate)
                 {
                     Ultimate();
-                    nextUltimate = Time.time + cooldownU;
+                                                                             nextUltimate = Time.time + cooldownU;
                 }
             }
         }
