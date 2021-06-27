@@ -391,6 +391,7 @@ GameObject:
   - component: {fileID: 8378263745687008609}
   - component: {fileID: 6266542219099719668}
   - component: {fileID: 5465874034235516571}
+  - component: {fileID: 1015283416232379329}
   m_Layer: 0
   m_Name: MidRange
   m_TagString: Player
@@ -729,3 +730,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 6.6441875, y: 1.0497998}
   m_EdgeRadius: 0
+--- !u!114 &1015283416232379329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7034348412880713440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b8c4a61274f60b4ea5fb4299cfdbf14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowLayerWeightsInspector: 1
+  ShowParameterInspector: 1
+  m_SynchronizeParameters: []
+  m_SynchronizeLayers: []
