@@ -16,9 +16,9 @@ public class Invicibility : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        AudioManager.audioManager.Play("power up");
         if (other.CompareTag("Player") && other.GetComponent<Health>() != null)
         {
+            AudioManager.audioManager.Play("power up");
             Health health = other.GetComponent<Health>();
             health.timeOfInvincibility = timeOfInvincibility;
             health.InvincibilityInit();
