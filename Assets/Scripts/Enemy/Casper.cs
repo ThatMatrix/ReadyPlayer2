@@ -59,7 +59,7 @@ public class Casper : MonoBehaviour
     void Start()
     {
         FindObjectOfType<AudioManager>().Play("CasperTheme");
-        
+        spots = FindObjectOfType<CasperSpotReference>().spots;
         timeBtwShots = startTimeBtwShots;
         sprite = gameObject.GetComponent<SpriteRenderer>();
         animator.SetBool("Dead", false);

@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using Cinemachine;
 using ExitGames.Client.Photon;
 using Photon.Pun;
 using Photon.Realtime;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 public class GameSetup : MonoBehaviour
@@ -15,6 +17,8 @@ public class GameSetup : MonoBehaviour
     public Transform[] spawnPoints;
 
     public byte eventCodeToLaunch;
+
+    private string sceneName;
 
     private void OnEnable()
     {
@@ -26,9 +30,10 @@ public class GameSetup : MonoBehaviour
 
     private void Start()
     {
-        LaunchEvent();
         FindObjectOfType<AudioManager>().Stop("NPCTheme");
         FindObjectOfType<AudioManager>().GameSetupPlay();
+        sceneName = SceneManager.GetActiveScene().name;
+        LaunchEvent();
     }
 
     void LaunchEvent()
@@ -40,5 +45,12 @@ public class GameSetup : MonoBehaviour
         };
         PhotonNetwork.RaiseEvent(eventCodeToLaunch, 3, options, SendOptions.SendReliable);
         Debug.Log("Event Sent");
+        Debug.Log("SceneNmae is " + sceneName);
+        if (sceneName == "etageBoss")
+        {
+            GameObject pos1 = GameObject.FindGameObjectWithTag("SpawnCasper");
+            PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "Casper"),
+               pos1.transform.position , Quaternion.identity);
+        }
     }
 }
