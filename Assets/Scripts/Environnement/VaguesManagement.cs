@@ -20,6 +20,8 @@ public class VaguesManagement : MonoBehaviour
     public GameObject Boss;
 
     private string sceneName;
+
+    private PhotonView PV;
     
     private bool HasEnemiesLeftOnTheMap()
     {
@@ -90,6 +92,8 @@ public class VaguesManagement : MonoBehaviour
 
     private void Start()
     {
+        PV = GetComponent<PhotonView>();
+        
         sceneName = SceneManager.GetActiveScene().name;
         if (!(Boss == null))
         {
@@ -121,7 +125,7 @@ public class VaguesManagement : MonoBehaviour
     private void Update()
     {
         canSpawn = HaveToDelete();
-        if (canSpawn && (!HasEnemiesLeftOnTheMap() || curWave == 0))
+        if (canSpawn && (!HasEnemiesLeftOnTheMap() || curWave == 0) && PV.IsMine)
         {
             Debug.Log("No enemies left on the map, incrementing the wave");
             curWave += 1;
