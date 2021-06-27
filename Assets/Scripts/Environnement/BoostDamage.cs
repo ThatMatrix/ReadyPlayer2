@@ -85,7 +85,11 @@ public class BoostDamage : MonoBehaviour
             }
             else if (other.GetComponent<MeleeSpells>() != null)
             {
-                GetComponent<MeleeSpells>().attackDamage += valueOfBoost;
+                if (other.GetComponent<MeleeSpells>().attackDamage != null)
+                {
+                    Debug.Log("I love bugs");
+                    other.GetComponent<MeleeSpells>().attackDamage += valueOfBoost;
+                }
             }
             else
             {
