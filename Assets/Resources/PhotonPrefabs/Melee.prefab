@@ -507,8 +507,8 @@ MonoBehaviour:
   kunaiForce: 20
   attackDamage: 20
   attackRange: 2
-  attackOffsetDroite: {x: 0, y: 0, z: 0}
-  attackOffsetGauche: {x: 0, y: 0, z: 0}
+  attackOffsetDroite: {x: 3, y: 0.5, z: 0}
+  attackOffsetGauche: {x: -3, y: 0.5, z: 0}
   attackMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -545,7 +545,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42800e10d88f83a42855c5c2ba27bcda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offset: 0
+  offset: 200
   Object: {fileID: 4016624707172909279}
 --- !u!61 &7325229495407277071
 BoxCollider2D:
