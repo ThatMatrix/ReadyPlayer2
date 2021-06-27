@@ -17,6 +17,7 @@ TagManager:
   - SpawnZone
   - NPC
   - SpawnCasper
+  - SpawnSepticEye
   layers:
   - Default
   - TransparentFX

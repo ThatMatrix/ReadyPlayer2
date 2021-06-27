@@ -28,6 +28,8 @@ public class SecticEye : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        points = FindObjectOfType<SepticEyeShootPoint>().points;
+        
         GotToStage2 = false;
         shotsForce = initialShotForce;
         FindObjectOfType<AudioManager>().Stop("UsualStage");

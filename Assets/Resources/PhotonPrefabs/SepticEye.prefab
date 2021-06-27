@@ -129,7 +129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   curHealth: 0
-  maxHealth: 100
+  maxHealth: 200
 --- !u!114 &8462313492760322251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -200,8 +200,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bb19969410244d41934dae9b03d1113, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp2ndPhase: 0
-  hp3rdPhase: 0
+  hp2ndPhase: 120
+  hp3rdPhase: 60
   points:
   - {fileID: 0}
   - {fileID: 0}
@@ -209,7 +209,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  initialShotForce: 0
+  - {fileID: 0}
+  initialShotForce: 20
   startTimeBtwShots: 2
 --- !u!114 &9130708203386764508
 MonoBehaviour:

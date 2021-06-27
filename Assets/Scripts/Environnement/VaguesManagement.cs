@@ -3,7 +3,9 @@ using System.IO;
 using System.Linq;
 using System.Threading;
 using Photon.Pun;
+using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class VaguesManagement : MonoBehaviour
 {
@@ -17,6 +19,8 @@ public class VaguesManagement : MonoBehaviour
 
     public GameObject Boss;
 
+    private string sceneName;
+    
     private bool HasEnemiesLeftOnTheMap()
     {
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
@@ -86,6 +90,7 @@ public class VaguesManagement : MonoBehaviour
 
     private void Start()
     {
+        sceneName = SceneManager.GetActiveScene().name;
         if (!(Boss == null))
         {
             Boss.SetActive(false);
@@ -153,6 +158,12 @@ public class VaguesManagement : MonoBehaviour
             curWave += 1;
             return;
         }
-        Boss.SetActive(true);
+
+        if (sceneName == "map3")
+        {
+            GameObject spawnPoint = GameObject.FindGameObjectWithTag("SpawnSepticEye");
+            PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "SepticEye"),
+                spawnPoint.transform.position, quaternion.identity);
+        }
     }
 }
