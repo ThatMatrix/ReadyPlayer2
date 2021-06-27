@@ -45,6 +45,7 @@ public class MeleeSpells : PlayerSpells
     
     public override void MainSpell()
     {
+        FindObjectOfType<AudioManager>().Play("MeleePrimary");
         _animator.SetTrigger("Attack");
         
         Vector2 movement = GetComponent<PlayerMovement>().GetMovement();
@@ -75,6 +76,7 @@ public class MeleeSpells : PlayerSpells
 
     public override void SecondarySpell()
     {
+        FindObjectOfType<AudioManager>().Play("Kunai");
         GameObject kunai = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "kunai"), 
             firePoint.transform.position, firePoint.transform.rotation);
         
@@ -84,6 +86,7 @@ public class MeleeSpells : PlayerSpells
 
     public override void Ultimate()
     {
+        FindObjectOfType<AudioManager>().Play("Kunai");
         // HAUT
         GameObject kunaiHAUT = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "kunaiTMP"), 
             haut.transform.position, haut.transform.rotation);

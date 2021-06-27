@@ -17589,8 +17589,8 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
-  - name: portal
-    clip: {fileID: 0}
+  - name: Kunai
+    clip: {fileID: 8300000, guid: f6c8462586cd9e94792d71e174205009, type: 3}
     volume: 0
     pitch: 1
     loop: 0
