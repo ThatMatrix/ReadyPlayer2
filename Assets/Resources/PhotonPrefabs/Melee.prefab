@@ -214,6 +214,8 @@ GameObject:
   - component: {fileID: 3781875982027165214}
   - component: {fileID: -6003868285543308042}
   - component: {fileID: -7834477405189493934}
+  - component: {fileID: 1260310772071030083}
+  - component: {fileID: 7325229495407277071}
   m_Layer: 0
   m_Name: Melee
   m_TagString: Player
@@ -400,6 +402,9 @@ MonoBehaviour:
   - Type: 4
     SynchronizeType: 0
     Name: IsWalking
+  - Type: 9
+    SynchronizeType: 0
+    Name: Attack
   m_SynchronizeLayers:
   - SynchronizeType: 1
     LayerIndex: 0
@@ -413,7 +418,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.45178992, y: -0.36413574}
@@ -527,6 +532,46 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dashSpeed: 20
   startDashTime: 0.1
+--- !u!114 &1260310772071030083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4016624707172909225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42800e10d88f83a42855c5c2ba27bcda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offset: 0
+  Object: {fileID: 4016624707172909279}
+--- !u!61 &7325229495407277071
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4016624707172909225}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.3242414, y: -4.5083055}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 15.6, y: 10.4}
+    newSize: {x: 2.5625, y: 5.125}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.1979532, y: 0.6320076}
+  m_EdgeRadius: 0
 --- !u!1 &4311420699704846264
 GameObject:
   m_ObjectHideFlags: 0
