@@ -12,6 +12,8 @@ public class EnemyHealth : MonoBehaviour
     public int maxHealth;
     private PhotonView PV;
 
+    private int sceneToGo;
+    
     private bool killOnce;
     
     
@@ -44,6 +46,12 @@ public class EnemyHealth : MonoBehaviour
             if (gameObject.GetComponent<Matt>() != null)
             {
                 FindObjectOfType<AudioManager>().Stop("MattTheme");
+                if (!killOnce)
+                {
+                    sceneToGo = 6;
+                    Kill();
+                    killOnce = true;
+                }
             }
             
             if (gameObject.GetComponent<Casper>() != null)
@@ -53,6 +61,7 @@ public class EnemyHealth : MonoBehaviour
                 Debug.Log("Casper hp are at 0");
                 if (!killOnce)
                 {
+                    sceneToGo = 5;
                     Invoke("Kill", 2.5f);
                     killOnce = true;
                 }
@@ -81,7 +90,7 @@ public class EnemyHealth : MonoBehaviour
                 gameObject.transform.position, quaternion.identity);
             if (portail.GetComponent<Escalier>() != null)
             {
-                portail.GetComponent<Escalier>().sceneToGo = 5;
+                portail.GetComponent<Escalier>().sceneToGo = this.sceneToGo;
             }
             else
             {
