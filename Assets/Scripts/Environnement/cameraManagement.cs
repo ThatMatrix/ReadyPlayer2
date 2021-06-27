@@ -81,7 +81,7 @@ public class cameraManagement : MonoBehaviour
                 }
                 if (sceneIndex == 6) //we need this condition because in the bossRoom the camera must unzoomed a bit
                 {
-                    cinemachineVirtualCamera.GetComponent<CinemachineVirtualCamera>().m_Lens.OrthographicSize = 10f;
+                    cinemachineVirtualCamera.GetComponent<CinemachineVirtualCamera>().m_Lens.OrthographicSize = 15f;
                 }
                 
                 //we make it so the camera follows the player
