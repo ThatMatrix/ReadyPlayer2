@@ -126,4 +126,6 @@ public class MageSpells : PlayerSpells
                 gameObject.transform.position + (Vector3) lookDir.normalized * rangeIcePool, Quaternion.identity);
         }
     }
+
+    
 }

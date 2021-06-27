@@ -86,7 +86,7 @@ public abstract class PlayerSpells : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.E) && Time.time > nextUltimate)
                 {
                     Ultimate();
-                                                                             nextUltimate = Time.time + cooldownU;
+                    nextUltimate = Time.time + cooldownU;
                 }
             }
         }
@@ -94,7 +94,7 @@ public abstract class PlayerSpells : MonoBehaviour
 
     public void FixedUpdate()
     {
-        lookDir = mousePos - rb.position;
+        lookDir = (Vector2) mousePos - (Vector2) centre.transform.position;
         float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
         firePointLeft.transform.position = (Vector2) centre.transform.position + offset;
         firePointRight.transform.position = (Vector2) centre.transform.position - offset;
@@ -109,6 +109,7 @@ public abstract class PlayerSpells : MonoBehaviour
 
     public abstract void Ultimate();
     public abstract void SetCooldowns();
+    
 
     private void ChooseFirePoint()
     {

@@ -85,8 +85,9 @@ public class cameraManagement : MonoBehaviour
                 }
                 
                 //we make it so the camera follows the player
-                cinemachineVirtualCamera.GetComponent<CinemachineVirtualCamera>().Follow = player.transform;
-                cinemachineVirtualCamera.GetComponent<CinemachineVirtualCamera>().LookAt = player.transform;
+                Transform toFollow = player.GetComponentInChildren<CenterManager>().GetCenter();
+                cinemachineVirtualCamera.GetComponent<CinemachineVirtualCamera>().Follow = toFollow;
+                cinemachineVirtualCamera.GetComponent<CinemachineVirtualCamera>().LookAt = toFollow;
                 cinemachineVirtualCamera.GetComponent<CinemachineVirtualCamera>().enabled = true;
 
                 //we add the new camera to the camera list

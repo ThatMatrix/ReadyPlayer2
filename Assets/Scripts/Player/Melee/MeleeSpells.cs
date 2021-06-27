@@ -42,7 +42,7 @@ public class MeleeSpells : PlayerSpells
         cooldownM = 2f;
         cooldownU = 7f;
     }
-
+    
     public override void MainSpell()
     {
         _animator.SetTrigger("Attack");

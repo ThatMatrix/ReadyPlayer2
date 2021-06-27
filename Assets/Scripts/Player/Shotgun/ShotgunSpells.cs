@@ -26,7 +26,7 @@ public class ShotgunSpells : PlayerSpells
         cooldownM = 2f;
         cooldownU = 0.5f;
     }
-
+    
     public override void MainSpell()
     {
         FindObjectOfType<AudioManager>().Play("shotgun");

@@ -506,8 +506,8 @@ MonoBehaviour:
   cooldownU: 0
   nextUltimate: 0
   dashlength: 5
-  kunaiForce: 20
-  attackDamage: 20
+  kunaiForce: 15
+  attackDamage: 30
   attackRange: 2
   attackOffsetDroite: {x: 3, y: 0.5, z: 0}
   attackOffsetGauche: {x: -3, y: 0.5, z: 0}
@@ -674,6 +674,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5698764850319862152}
+  - component: {fileID: 3891762187174278875}
   m_Layer: 0
   m_Name: Centre
   m_TagString: Untagged
@@ -695,3 +696,15 @@ Transform:
   m_Father: {fileID: 4016624707172909279}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3891762187174278875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8338884041742173096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33c20510c67025e40b0f25ddadc8cc53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
