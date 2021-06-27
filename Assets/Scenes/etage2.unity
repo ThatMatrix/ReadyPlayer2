@@ -421,6 +421,7 @@ GameObject:
   - component: {fileID: 100496561}
   - component: {fileID: 100496560}
   - component: {fileID: 100496559}
+  - component: {fileID: 100496562}
   m_Layer: 0
   m_Name: SpawnCouloir
   m_TagString: SpawnZone
@@ -520,6 +521,28 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 13.3261, y: 79.913315}
   m_EdgeRadius: 0
+--- !u!114 &100496562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100496557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  observableSearch: 2
+  Synchronization: 3
+  OwnershipTransfer: 0
+  ObservedComponents: []
+  viewIdField: 514253
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &168781521
 GameObject:
   m_ObjectHideFlags: 0
@@ -1011,6 +1034,7 @@ GameObject:
   - component: {fileID: 261665302}
   - component: {fileID: 261665304}
   - component: {fileID: 261665303}
+  - component: {fileID: 261665305}
   m_Layer: 0
   m_Name: SpawnSalleDeJeu
   m_TagString: SpawnZone
@@ -1078,6 +1102,28 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 32.219723, y: 26.132748}
   m_EdgeRadius: 0
+--- !u!114 &261665305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 261665301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  observableSearch: 2
+  Synchronization: 3
+  OwnershipTransfer: 0
+  ObservedComponents: []
+  viewIdField: 438792
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &264150873
 GameObject:
   m_ObjectHideFlags: 0
@@ -2659,6 +2705,7 @@ GameObject:
   - component: {fileID: 647599934}
   - component: {fileID: 647599936}
   - component: {fileID: 647599935}
+  - component: {fileID: 647599937}
   m_Layer: 0
   m_Name: SpawnChambreBB
   m_TagString: SpawnZone
@@ -2724,6 +2771,28 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 22.161564, y: 18.424469}
   m_EdgeRadius: 0
+--- !u!114 &647599937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 647599933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  observableSearch: 2
+  Synchronization: 3
+  OwnershipTransfer: 0
+  ObservedComponents: []
+  viewIdField: 9634509
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &687976484
 GameObject:
   m_ObjectHideFlags: 0
@@ -4087,6 +4156,7 @@ GameObject:
   - component: {fileID: 1124399761}
   - component: {fileID: 1124399763}
   - component: {fileID: 1124399762}
+  - component: {fileID: 1124399764}
   m_Layer: 0
   m_Name: SpawnChambreEnfants
   m_TagString: SpawnZone
@@ -4152,6 +4222,28 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 22.161564, y: 18.424469}
   m_EdgeRadius: 0
+--- !u!114 &1124399764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1124399760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  observableSearch: 2
+  Synchronization: 3
+  OwnershipTransfer: 0
+  ObservedComponents: []
+  viewIdField: 83576098
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &1130537766
 GameObject:
   m_ObjectHideFlags: 0
@@ -11181,6 +11273,7 @@ GameObject:
   - component: {fileID: 1281204919}
   - component: {fileID: 1281204921}
   - component: {fileID: 1281204920}
+  - component: {fileID: 1281204922}
   m_Layer: 0
   m_Name: SpawnSalleDeBain
   m_TagString: SpawnZone
@@ -11248,6 +11341,28 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 24.424417, y: 22.090279}
   m_EdgeRadius: 0
+--- !u!114 &1281204922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1281204918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  observableSearch: 2
+  Synchronization: 3
+  OwnershipTransfer: 0
+  ObservedComponents: []
+  viewIdField: 183569886
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &1307924053
 GameObject:
   m_ObjectHideFlags: 0
@@ -14375,6 +14490,7 @@ GameObject:
   - component: {fileID: 1431570636}
   - component: {fileID: 1431570638}
   - component: {fileID: 1431570637}
+  - component: {fileID: 1431570639}
   m_Layer: 0
   m_Name: SpawnChambreParents
   m_TagString: SpawnZone
@@ -14444,6 +14560,28 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 23.316912, y: 25.126102}
   m_EdgeRadius: 0
+--- !u!114 &1431570639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1431570635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  observableSearch: 2
+  Synchronization: 3
+  OwnershipTransfer: 0
+  ObservedComponents: []
+  viewIdField: 1734689
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &1491914857
 GameObject:
   m_ObjectHideFlags: 0
