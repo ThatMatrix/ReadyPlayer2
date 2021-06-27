@@ -25,10 +25,10 @@ public class Health : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if( Input.GetKeyDown( KeyCode.Space ) )
-        {
-            DamagePlayer(10);
-        }
+        // if( Input.GetKeyDown( KeyCode.Space ) )
+        // {
+        //     DamagePlayer(10);
+        // }
 
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
         foreach (var enemy in enemies)
