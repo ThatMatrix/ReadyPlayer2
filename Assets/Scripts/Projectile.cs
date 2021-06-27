@@ -31,7 +31,7 @@ public class Projectile : MonoBehaviour
                 collision.GetComponent<Health>().DamagePlayer(damage);
             }
         
-            if (PV && ( PV.IsMine))
+            if (PV && ( PV.IsMine) && !collision.CompareTag("Ice_Pool"))
             {
                 PhotonNetwork.Destroy(gameObject);
             }
