@@ -19,10 +19,10 @@ GameObject:
   - component: {fileID: -1901849256991349692}
   - component: {fileID: 6235703375995977578}
   - component: {fileID: 2749960252164811638}
-  - component: {fileID: 1486824834842499177}
+  - component: {fileID: 2498332809687240187}
   m_Layer: 0
   m_Name: Matt
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -158,7 +158,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cb11e8f39274b9408b2fc6624759019, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 6
+  moveSpeed: 22.5
   distance: 8
   resetSlow: 0
   toReset: 0
@@ -278,7 +278,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.7385154, y: 3.68}
   m_EdgeRadius: 0
---- !u!50 &1486824834842499177
+--- !u!50 &2498332809687240187
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -291,11 +291,11 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 1.5
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
