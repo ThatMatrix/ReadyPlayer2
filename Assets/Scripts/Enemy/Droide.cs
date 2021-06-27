@@ -1,5 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.IO;
+using Photon.Pun;
 using UnityEngine;
 
 public class Droide : MonoBehaviour
@@ -68,7 +70,7 @@ public class Droide : MonoBehaviour
     {
         if (Time.time > nextFire)
         {
-            Instantiate(shoot, spawn.position, Quaternion.identity);
+            PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "Shoot droid"), spawn.position, Quaternion.identity);
             nextFire = Time.time + fireRate;
         }
     }
