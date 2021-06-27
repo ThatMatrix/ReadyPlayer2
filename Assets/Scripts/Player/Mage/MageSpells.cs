@@ -21,10 +21,10 @@ public class MageSpells : PlayerSpells
 
     public override void SetCooldowns()
     {
-        cooldown1 = 1f;
-        cooldown2 = 3f;
-        cooldownM = 6f;
-        cooldownU = 10f;
+        cooldown1 = 2f;
+        cooldown2 = 3.5f;
+        cooldownM = 3f;
+        cooldownU = 7f;
     }
 
 

@@ -23,6 +23,7 @@ public abstract class PlayerSpells : MonoBehaviour
 
     public GameObject firePointLeft;
     public GameObject firePointRight;
+    public GameObject centre;
     public bool right;
     
     
@@ -44,7 +45,7 @@ public abstract class PlayerSpells : MonoBehaviour
         rbFirePoint = firePoint.GetComponent<Rigidbody2D>();
         cam = Camera.main;
         health = maxHealth;
-        offset = firePoint.transform.position - gameObject.transform.position;
+        offset = firePoint.transform.position - centre.transform.position;
         SetCooldowns();
     }
     
@@ -95,8 +96,8 @@ public abstract class PlayerSpells : MonoBehaviour
     {
         lookDir = mousePos - rb.position;
         float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
-        firePointLeft.transform.position = (Vector2) gameObject.transform.position + offset;
-        firePointRight.transform.position = (Vector2) gameObject.transform.position - offset;
+        firePointLeft.transform.position = (Vector2) centre.transform.position + offset;
+        firePointRight.transform.position = (Vector2) centre.transform.position - offset;
         rbFirePoint.rotation = angle;
     }
 

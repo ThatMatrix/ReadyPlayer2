@@ -55,7 +55,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6131514492884173306}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.93, y: 0.5, z: -0.033367634}
+  m_LocalPosition: {x: 1.84, y: 2.35, z: 0}
   m_LocalScale: {x: 0.2, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7901002820815632035}
@@ -137,7 +137,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7901002820162226302}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.49, y: 0.5, z: -0.033367634}
+  m_LocalPosition: {x: -2.42, y: 2.47, z: 0}
   m_LocalScale: {x: 0.2, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7901002820815632035}
@@ -340,7 +340,7 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 7901002820815632041}
   - {fileID: 7901002820815632040}
-  viewIdField: 0
+  viewIdField: 2
   InstantiationId: 0
   isRuntimeInstantiated: 0
 --- !u!114 &7901002820815632041
@@ -413,6 +413,7 @@ MonoBehaviour:
   offset: {x: 0, y: 0}
   firePointLeft: {fileID: 7901002820162226302}
   firePointRight: {fileID: 6131514492884173306}
+  centre: {fileID: 7646137491341731421}
   right: 0
   cooldown1: 0
   nextSpell1: 0

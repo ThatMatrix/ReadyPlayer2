@@ -7,7 +7,7 @@ using UnityEngine;
 public class IcePool : MonoBehaviour
 {
     public PhotonView PV;
-    private float timeDuration = 5f;
+    private float timeDuration = 2.5f;
     private float timeSpawn;
     
     void Start()

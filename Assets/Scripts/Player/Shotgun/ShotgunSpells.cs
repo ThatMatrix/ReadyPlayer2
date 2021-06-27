@@ -30,7 +30,7 @@ public class ShotgunSpells : PlayerSpells
     public override void MainSpell()
     {
         FindObjectOfType<AudioManager>().Play("shotgun");
-        if (right)
+        if (!right)
         {
             _animator.Play("ShotGunShootR");
         }

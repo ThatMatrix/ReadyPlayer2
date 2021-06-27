@@ -37,10 +37,10 @@ public class MeleeSpells : PlayerSpells
     public override void SetCooldowns()
     {
         SetRotations();
-        cooldown1 = 2.5f;
+        cooldown1 = 1f;
         cooldown2 = 2f;
-        cooldownM = 5f;
-        cooldownU = 10f;
+        cooldownM = 2f;
+        cooldownU = 7f;
     }
 
     public override void MainSpell()
