@@ -20,11 +20,19 @@ public class VaguesManagement : MonoBehaviour
     private bool HasEnemiesLeftOnTheMap()
     {
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
-        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Droid");
+        GameObject[] droids = GameObject.FindGameObjectsWithTag("Droid");
 
         foreach (var enemy in enemies)
         {
             if (enemy.activeSelf)
+            {
+                return true;
+            }
+        }
+
+        foreach (var droid in droids)
+        {
+            if (droid.activeSelf)
             {
                 return true;
             }
@@ -36,6 +44,8 @@ public class VaguesManagement : MonoBehaviour
     void DeleteAllEnemies()
     {
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        GameObject[] droids = GameObject.FindGameObjectsWithTag("Droid");
+
         foreach (var enemy in enemies)
         {
             PhotonView photonView = enemy.GetPhotonView();
@@ -43,6 +53,17 @@ public class VaguesManagement : MonoBehaviour
             if (PhotonNetwork.IsMasterClient || photonView.AmOwner || photonView.IsMine)
             {
                 Debug.Log("destroyed enemy");
+                PhotonNetwork.Destroy(gameObject);
+            }
+        }
+        
+        foreach (var droid in droids)
+        {
+            PhotonView photonView = droid.GetPhotonView();
+            
+            if (PhotonNetwork.IsMasterClient || photonView.AmOwner || photonView.IsMine)
+            {
+                Debug.Log("destroyed droid");
                 PhotonNetwork.Destroy(gameObject);
             }
         }
