@@ -27,6 +27,7 @@ public class GameSetup : MonoBehaviour
     private void Start()
     {
         LaunchEvent();
+        FindObjectOfType<AudioManager>().Stop("NPCTheme");
         FindObjectOfType<AudioManager>().GameSetupPlay();
     }
 
