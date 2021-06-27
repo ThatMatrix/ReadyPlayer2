@@ -22,6 +22,7 @@ public class VaguesManagement : MonoBehaviour
     private string sceneName;
 
     private PhotonView PV;
+    public GameObject spawnPoint;
     
     private bool HasEnemiesLeftOnTheMap()
     {
@@ -153,6 +154,8 @@ public class VaguesManagement : MonoBehaviour
                     spawnPoint.transform.position, spawnPoint.transform.rotation);
             }
         }
+        
+        
     }
 
     void SpawnBossWave()
@@ -163,11 +166,17 @@ public class VaguesManagement : MonoBehaviour
             return;
         }
 
-        if (sceneName == "map3")
+        if (sceneName == "map2")
         {
-            GameObject spawnPoint = GameObject.FindGameObjectWithTag("SpawnSepticEye");
-            PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "SepticEye"),
+            PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "Matt"),
                 spawnPoint.transform.position, quaternion.identity);
+        }
+
+        else if (sceneName == "map3")
+        {
+            GameObject spawnPointSecpicEye = GameObject.FindGameObjectWithTag("SpawnSepticEye");
+            PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "SepticEye"),
+                spawnPointSecpicEye.transform.position, quaternion.identity);
         }
     }
 }

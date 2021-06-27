@@ -278,6 +278,36 @@ EdgeCollider2D:
   - {x: 3.6748505, y: -0.3521502}
   - {x: 3.645481, y: -0.43009305}
   - {x: -3.2519374, y: -0.46021414}
+--- !u!1 &13370536
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 13370537}
+  m_Layer: 0
+  m_Name: SpawnMatt
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &13370537
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 13370536}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -12.8, y: -6.2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 19
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &45691432
 GameObject:
   m_ObjectHideFlags: 0
@@ -1073,6 +1103,7 @@ MonoBehaviour:
   - Enemy
   - Droid
   Boss: {fileID: 0}
+  spawnPoint: {fileID: 13370536}
 --- !u!4 &193855752
 Transform:
   m_ObjectHideFlags: 0
@@ -2616,7 +2647,7 @@ Transform:
   m_LocalScale: {x: 0.74, y: 0.74, z: 0.74}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &478519055
 GameObject:
@@ -28233,6 +28264,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Matt
+      objectReference: {fileID: 0}
+    - target: {fileID: 2068500629096969875, guid: 946470ed96fffce4c9134888f61bd166,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2068500629096969875, guid: 946470ed96fffce4c9134888f61bd166,
         type: 3}
