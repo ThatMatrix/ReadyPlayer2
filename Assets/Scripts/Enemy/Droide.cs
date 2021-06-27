@@ -12,9 +12,12 @@ public class Droide : MonoBehaviour
     public bool isFlipped = false;
     [SerializeField] private Transform spawn;
     private Transform target;
+
+    private PhotonView PV;
     // Start is called before the first frame update
     void Start()
     {
+        PV = GetComponent<PhotonView>();
         fireRate = 5f;
         nextFire = Time.time;
     }
@@ -68,7 +71,7 @@ public class Droide : MonoBehaviour
     }
     void CheckIfShoot()
     {
-        if (Time.time > nextFire)
+        if (Time.time > nextFire && PV.IsMine)
         {
             PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "Shoot droid"), spawn.position, Quaternion.identity);
             nextFire = Time.time + fireRate;
