@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
 
 public class NPCDialogBox : MonoBehaviour
@@ -10,11 +11,13 @@ public class NPCDialogBox : MonoBehaviour
     public bool go;
     private bool waiting = false;
 
+    private string currentScene;
+
     public GameObject teleportTo;
     // Start is called before the first frame update
     void OnEnable()
     {
-        
+        currentScene = SceneManager.GetActiveScene().name;
     }
 
     // Update is called once per frame
@@ -29,6 +32,10 @@ public class NPCDialogBox : MonoBehaviour
         
         if (waiting && despawnTimer < Time.time)
         {
+            if (currentScene == "map3")
+            {
+                
+            }
             gameObject.SetActive(false);
         }
     }
