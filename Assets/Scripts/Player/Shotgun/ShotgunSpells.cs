@@ -130,7 +130,7 @@ public class ShotgunSpells : PlayerSpells
     public override void Ultimate()
     {
         FindObjectOfType<AudioManager>().Play("canon");
-        if (right)
+        if (!right)
         {
             _animator.Play("ShotGunShootR");
         }

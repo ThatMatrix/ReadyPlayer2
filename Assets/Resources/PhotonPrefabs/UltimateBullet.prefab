@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 2665776814727571614}
   m_Layer: 0
   m_Name: UltimateBullet
-  m_TagString: Untagged
+  m_TagString: Ally_shot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
