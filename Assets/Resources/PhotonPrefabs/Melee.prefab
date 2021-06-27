@@ -507,7 +507,8 @@ MonoBehaviour:
   kunaiForce: 20
   attackDamage: 20
   attackRange: 2
-  attackOffset: {x: 3, y: 0.5, z: 0}
+  attackOffsetDroite: {x: 0, y: 0, z: 0}
+  attackOffsetGauche: {x: 0, y: 0, z: 0}
   attackMask:
     serializedVersion: 2
     m_Bits: 4294967295

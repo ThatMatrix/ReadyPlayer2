@@ -13,7 +13,8 @@ public class MeleeSpells : PlayerSpells
     
     public int attackDamage = 20;
     public float attackRange = 1f;
-    public Vector3 attackOffset;
+    public Vector3 attackOffsetDroite;
+    public Vector3 attackOffsetGauche;
     public LayerMask attackMask;
     
     public GameObject bas;
@@ -174,13 +175,13 @@ public class MeleeSpells : PlayerSpells
         Vector3 pos = transform.position;
         if (right)
         {
-            pos += transform.right * attackOffset.x;
+            pos += transform.right * attackOffsetDroite.x;
         }
         else
         {
-            pos += transform.right * -attackOffset.x;
+            pos += transform.right * attackOffsetGauche.x;
         }
-        pos += transform.up * attackOffset.y;
+        pos += transform.up * attackOffsetDroite.y;
         
         Collider2D colInfo = Physics2D.OverlapCircle(pos, attackRange, attackMask);
         if (colInfo != null && (colInfo.CompareTag("Enemy") || colInfo.CompareTag("Droid")))
@@ -193,8 +194,8 @@ public class MeleeSpells : PlayerSpells
     void OnDrawGizmosSelected()
     {
         Vector3 pos = transform.position;
-        pos += transform.right * attackOffset.x;
-        pos += transform.up * attackOffset.y;
+        pos += transform.right * attackOffsetGauche.x;
+        pos += transform.up * attackOffsetGauche.y;
 
         Gizmos.DrawWireSphere(pos, attackRange);
     }
