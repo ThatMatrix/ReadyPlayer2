@@ -507,7 +507,7 @@ MonoBehaviour:
   nextUltimate: 0
   dashlength: 5
   kunaiForce: 15
-  attackDamage: 30
+  attackDamage: 40
   attackRange: 2
   attackOffsetDroite: {x: 3, y: 0.5, z: 0}
   attackOffsetGauche: {x: -3, y: 0.5, z: 0}

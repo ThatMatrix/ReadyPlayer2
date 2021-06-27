@@ -45191,7 +45191,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &383950755
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -54361,6 +54361,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sword_Small
       objectReference: {fileID: 0}
+    - target: {fileID: 3111482078025788740, guid: 710922c47fb90bc4d90fa6f35bc71117,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3111482078025788762, guid: 710922c47fb90bc4d90fa6f35bc71117,
         type: 3}
       propertyPath: viewIdField
@@ -55478,7 +55483,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2039552033
 Transform:
   m_ObjectHideFlags: 0
