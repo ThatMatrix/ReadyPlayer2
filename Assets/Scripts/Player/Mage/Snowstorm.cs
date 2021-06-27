@@ -38,7 +38,7 @@ public class Snowstorm : MonoBehaviour
 
                 if (enemy.GetComponent<EnemyAI>() != null)
                 {
-                    enemy.GetComponent<Lizard>().enabled = true;
+                    enemy.GetComponent<EnemyAI>().enabled = true;
                 }
             }
 

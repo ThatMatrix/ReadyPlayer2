@@ -125,7 +125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   curHealth: 0
-  maxHealth: 50
+  maxHealth: 200
 --- !u!95 &589069130
 Animator:
   serializedVersion: 3

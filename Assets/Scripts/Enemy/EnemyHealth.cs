@@ -28,10 +28,10 @@ public class EnemyHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            DamageEnemy(20);
-        }
+        // if (Input.GetKeyDown(KeyCode.Space))
+        // {
+        //     DamageEnemy(20);
+        // }
         
         if (curHealth <= 0)
         {
@@ -41,6 +41,7 @@ public class EnemyHealth : MonoBehaviour
             {
                 gameObject.GetComponent<Animator>().SetTrigger("Dead");
                 FindObjectOfType<AudioManager>().Stop("SepticEyeTheme");
+                GameObject.FindGameObjectWithTag("NPC").SetActive(true);
             }
 
             if (gameObject.GetComponent<Matt>() != null)
@@ -52,12 +53,14 @@ public class EnemyHealth : MonoBehaviour
                     Kill();
                     killOnce = true;
                 }
+
+                GameObject.FindGameObjectWithTag("NPC").GetComponent<NPCDialogBox>().go = true;
             }
-            
+
             if (gameObject.GetComponent<Casper>() != null)
             {
                 FindObjectOfType<AudioManager>().Stop("CasperTheme");
-                gameObject.GetComponent<Casper>().animator.SetBool("Dead",true);
+                gameObject.GetComponent<Casper>().animator.SetBool("Dead", true);
                 Debug.Log("Casper hp are at 0");
                 if (!killOnce)
                 {
@@ -65,6 +68,8 @@ public class EnemyHealth : MonoBehaviour
                     Invoke("Kill", 2.5f);
                     killOnce = true;
                 }
+
+                GameObject.FindGameObjectWithTag("NPC").GetComponent<NPCDialogBox>().go = true;
             }
             else
             {

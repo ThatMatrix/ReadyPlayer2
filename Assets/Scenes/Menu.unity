@@ -17591,7 +17591,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Kunai
     clip: {fileID: 8300000, guid: f6c8462586cd9e94792d71e174205009, type: 3}
-    volume: 0
+    volume: 0.284
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -17624,6 +17624,12 @@ MonoBehaviour:
     volume: 0.204
     pitch: 1
     loop: 1
+    source: {fileID: 0}
+  - name: MeleePrimary
+    clip: {fileID: 8300000, guid: a2fd8a2dae1e03c41b716967c43504d6, type: 3}
+    volume: 0.204
+    pitch: 1
+    loop: 0
     source: {fileID: 0}
 --- !u!4 &897062987
 Transform:
