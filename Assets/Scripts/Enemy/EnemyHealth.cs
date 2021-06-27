@@ -41,7 +41,7 @@ public class EnemyHealth : MonoBehaviour
             {
                 gameObject.GetComponent<Animator>().SetTrigger("Dead");
                 FindObjectOfType<AudioManager>().Stop("SepticEyeTheme");
-                GameObject.FindGameObjectWithTag("NPC").SetActive(true);
+                GameObject.FindGameObjectWithTag("NPC").GetComponent<NPCDialogBox>().go = true;
             }
 
             if (gameObject.GetComponent<Matt>() != null)

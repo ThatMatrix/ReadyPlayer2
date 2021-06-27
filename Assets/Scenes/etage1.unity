@@ -7776,6 +7776,10 @@ PrefabInstance:
       propertyPath: teleportTo
       value: 
       objectReference: {fileID: 1435139005}
+    - target: {fileID: 6651468, guid: 6123439f67869884a82526d9af872171, type: 3}
+      propertyPath: VictoryMenu
+      value: 
+      objectReference: {fileID: 1435139005}
     - target: {fileID: 1528800070717307535, guid: 6123439f67869884a82526d9af872171,
         type: 3}
       propertyPath: m_Name
