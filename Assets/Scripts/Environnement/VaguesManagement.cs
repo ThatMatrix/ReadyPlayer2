@@ -20,6 +20,8 @@ public class VaguesManagement : MonoBehaviour
     private bool HasEnemiesLeftOnTheMap()
     {
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Droid");
+
         foreach (var enemy in enemies)
         {
             if (enemy.activeSelf)
