@@ -20,16 +20,19 @@ public class UltimateBullet : MonoBehaviour
     }
     
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!collision.gameObject.CompareTag("SpawnZone"))
+        if (!collision.CompareTag("SpawnZone"))
         {
-            if (collision.collider.GetComponent<EnemyHealth>() != null)
+            if (collision.GetComponent<EnemyHealth>() != null && gameObject.CompareTag("Ally_shot"))
             {
-                collision.collider.GetComponent<EnemyHealth>().DamageEnemy(damage + boostValue);
+                collision.GetComponent<EnemyHealth>().DamageEnemy(damage + boostValue);
+            } else if (collision.GetComponent<Health>() != null && gameObject.CompareTag("Enemy_shot"))
+            {
+                collision.GetComponent<Health>().DamagePlayer(damage);
             }
         
-            if (PV && ( PV.IsMine))
+            if (PV && ( PV.IsMine) && !collision.CompareTag("Ice_Pool"))
             {
                 PhotonNetwork.Destroy(gameObject);
             }
